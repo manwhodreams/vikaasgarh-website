@@ -1,0 +1,391 @@
+:root {
+
+    /* Brand Colours */
+    --primary: #000c40;
+    --secondary: #FFC107;
+    --surface: #ffffff;
+
+    /* Text Colours */
+    --text-primary: #000c40;
+    --text-secondary: rgba(0, 12, 64, 0.80);
+    --text-tertiary: rgba(0, 12, 64, 0.60);
+
+    /* Dark Section Text */
+    --text-on-dark: #ffffff;
+    --text-on-dark-secondary: rgba(255, 255, 255, 0.80);
+
+    /* Borders */
+    --border-light: rgba(0, 12, 64, 0.20);
+    --border-dark: rgba(255, 255, 255, 0.20);
+
+    /* Backgrounds */
+    --background-primary: #ffffff;
+    --background-dark: #000c40;
+    --background-subtle: rgba(255, 255, 255, 0.03);
+
+}
+
+.hero-section {
+    width: 100%;
+    background-color: var(--background-primary);
+    padding: 88px 0 88px;
+}
+
+.hero-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    text-align: center;
+}
+
+.hero-badge {
+    width: fit-content;
+    margin: 0 auto 30px;
+    padding: 11px 24px;
+    border-radius: 999px;
+    background-color: var(--primary);
+    color: var(--text-on-dark);
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.hero-badge span {
+    color: var(--text-on-dark);
+    margin: 0 8px;
+}
+
+.hero-heading {
+    max-width: 1280px;
+    margin: 0 auto;
+    font-family: 'Clash Display', 'Inter', sans-serif;
+    font-size: 88px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -3px;
+    color: var(--text-primary);
+}
+
+.hero-description {
+    max-width: 1180px;
+    margin: 34px auto 0;
+    font-size: 20px;
+    line-height: 1.8;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.hero-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.hero-button-primary,
+.hero-button-secondary {
+    height: 50px;
+    padding: 0 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.hero-button-primary {
+    background-color: var(--secondary);
+    border: 2px solid var(--secondary);
+    color: var(--text-primary);
+}
+
+.hero-button-primary:hover {
+    background-color: transparent;
+    border-color: var(--primary);
+    color: var(--text-primary);
+}
+
+.hero-button-secondary {
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    color: var(--text-on-dark);
+}
+
+.hero-button-secondary:hover {
+    background-color: var(--surface);
+    color: var(--text-primary);
+}
+
+
+
+
+
+.about-section {
+    width: 100%;
+    background-color: var(--background-dark);
+    padding: 88px 0;
+}
+
+.about-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 56px;
+    align-items: center;
+}
+
+.about-badge {
+    width: fit-content;
+    margin-bottom: 28px;
+    padding: 11px 24px;
+    border-radius: 999px;
+    background-color: var(--surface);
+    color: var(--text-primary);
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.about-heading {
+    max-width: 620px;
+    font-family: 'Clash Display', 'Inter', sans-serif;
+    font-size: 56px;
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -1.8px;
+    color: var(--text-on-dark);
+}
+
+.about-description {
+    max-width: 680px;
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 1.75;
+    font-weight: 500;
+    color: var(--text-on-dark-secondary);
+}
+
+.about-button {
+    margin-top: 36px;
+    height: 50px;
+    padding: 0 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--secondary);
+    border-radius: 999px;
+    background-color: var(--secondary);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.about-button:hover {
+    background-color: transparent;
+    color: var(--secondary);
+}
+
+.about-info-row {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 680px;
+}
+
+.about-info {
+    width: 100%;
+    padding: 32px;
+    border-radius: 24px;
+    border: 1px solid var(--border-dark);
+}
+
+.about-info span {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--text-on-dark-secondary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.about-info strong {
+    display: block;
+    font-family: 'Clash Display', 'Inter', sans-serif;
+    color: var(--text-on-dark);
+    font-size: 36px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.about-map-card {
+    width: 100%;
+    height: 720px;
+    padding: 36px;
+    border-radius: 32px;
+    background-color: var(--surface);
+}
+
+.about-map-header {
+    margin-bottom: 28px;
+}
+
+.about-map-title {
+    font-family: 'Clash Display', 'Inter', sans-serif;
+    font-size: 36px;
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    color: var(--text-primary);
+}
+
+.about-map-divider {
+    margin-top: 22px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-light);
+}
+
+.about-map {
+    margin-top: 36px;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-map img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+
+
+
+
+
+
+
+
+.ecosystem-section {
+    width: 100%;
+    background-color: var(--background-primary);
+    padding: 88px 0;
+}
+
+.ecosystem-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    text-align: center;
+}
+
+.ecosystem-heading {
+    font-family: 'Clash Display', 'Inter', sans-serif;
+    font-size: 56px;
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -1.8px;
+    color: var(--text-primary);
+}
+
+.ecosystem-description {
+    max-width: 880px;
+    margin: 24px auto 0;
+    font-size: 18px;
+    line-height: 1.75;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.ecosystem-cards {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.ecosystem-card {
+    min-height: 470px;
+    padding: 36px 32px;
+    border: 1px solid var(--border-light);
+    border-radius: 28px;
+    background-color: var(--surface);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.ecosystem-card-logo {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ecosystem-card-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.ecosystem-card h3 {
+    min-height: 70px;
+    font-family: 'Clash Display', 'Inter', sans-serif;
+    font-size: 32px;
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    color: var(--text-primary);
+}
+
+.ecosystem-card p {
+    min-height: 92px;
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.ecosystem-card a {
+    width: fit-content;
+    height: 46px;
+    margin-top: 24px;
+    padding: 0 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--primary);
+    border-radius: 999px;
+    background-color: var(--surface);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.ecosystem-card a:hover {
+    background-color: var(--primary);
+    color: var(--text-on-dark);
+}

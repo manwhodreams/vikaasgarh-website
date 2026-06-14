@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VikaasGarh</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/CSS/main.css">
+    <link rel="stylesheet" href="/CSS/accelerator.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div id="utility-bar"></div>
+    <div id="header"></div>
+
+    <section class="faq-section" id="faq-section">
+
+        <div class="faq-container">
+
+            <div class="faq-header">
+
+                <div class="faq-badge">
+                    <span>FAQs</span>
+                </div>
+
+                <h2 class="faq-heading">
+                    Frequently Asked Questions
+                </h2>
+
+                <p class="faq-subline">
+                    Everything you need to know about VikaasGarh.
+                </p>
+
+            </div>
+
+            <div class="faq-layout">
+
+                <div class="faq-filters">
+
+                    <button type="button"
+                            class="faq-filter-btn active"
+                            data-tab="home">
+                        <span class="faq-filter-btn-circle">1</span>
+                        <span class="faq-filter-btn-text">General</span>
+                    </button>
+
+                    <button type="button"
+                            class="faq-filter-btn"
+                            data-tab="academy">
+                        <span class="faq-filter-btn-circle">2</span>
+                        <span class="faq-filter-btn-text">Academy</span>
+                    </button>
+
+                    <button type="button"
+                            class="faq-filter-btn"
+                            data-tab="incubator">
+                        <span class="faq-filter-btn-circle">3</span>
+                        <span class="faq-filter-btn-text">Incubator</span>
+                    </button>
+
+                    <button type="button"
+                            class="faq-filter-btn"
+                            data-tab="accelerator">
+                        <span class="faq-filter-btn-circle">4</span>
+                        <span class="faq-filter-btn-text">Accelerator</span>
+                    </button>
+
+                </div>
+
+                <div class="faq-panels">
+
+                    <div class="faq-panel active" data-panel="home"></div>
+
+                    <div class="faq-panel" data-panel="academy"></div>
+
+                    <div class="faq-panel" data-panel="incubator"></div>
+
+                    <div class="faq-panel" data-panel="accelerator"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div id="contact-cta"></div>
+    <div id="footer"></div>
+
+    <script src="/JavaScript/main.js"></script>
+    <script src="/JavaScript/accelerator.js"></script>
+    <script src="/JavaScript/faq-data.js"></script>
+</body>
+</html>
