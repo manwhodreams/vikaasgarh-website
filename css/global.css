@@ -1,0 +1,1774 @@
+@font-face {
+    font-family: 'Clash Display';
+    src: url('../assets/fonts/clash-display/clash-display-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* ============================================================
+   DESIGN SYSTEM
+============================================================ */
+
+:root {
+
+    /* Brand Colors */
+
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-navy: #000c40;
+    --color-gold: #eaad07;
+    --color-cyan: #4ad3ff;
+
+
+    /* Text Colors */
+
+    --color-text: var(--color-navy);
+
+    --color-text-secondary:
+        rgba(0, 12, 64, 0.70);
+
+    --color-text-on-dark:
+        var(--color-white);
+
+    --color-text-on-dark-secondary:
+        rgba(255, 255, 255, 0.74);
+
+
+    /* Borders */
+
+    --border-light:
+        rgba(0, 12, 64, 0.12);
+
+    --border-light-strong:
+        rgba(0, 12, 64, 0.22);
+
+    --border-dark:
+        rgba(255, 255, 255, 0.16);
+
+
+    /* Typography */
+
+    --font-primary:
+        'Inter',
+        sans-serif;
+
+    --font-heading:
+        'Clash Display',
+        'Inter',
+        sans-serif;
+
+
+    /* Layout */
+
+    --container-width: 1280px;
+
+    --container-padding: 32px;
+
+    --section-padding: 88px;
+
+
+    /* Radius */
+
+    --radius-card: 24px;
+
+    --radius-card-large: 28px;
+
+    --radius-pill: 999px;
+
+
+    /* Shadows */
+
+    --shadow-card:
+        0 12px 30px
+        rgba(0, 12, 64, 0.08);
+
+    --shadow-card-hover:
+        0 20px 44px
+        rgba(0, 12, 64, 0.14);
+
+
+    /* Motion */
+
+    --transition-fast:
+        0.2s ease;
+
+    --transition-standard:
+        0.25s ease;
+}
+
+
+/* ============================================================
+   GLOBAL RESET
+============================================================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+
+    scroll-behavior: smooth;
+
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    width: 100%;
+
+    min-width: 320px;
+
+    margin: 0;
+
+    overflow-x: hidden;
+
+    font-family: var(--font-primary);
+
+    color: var(--color-text);
+
+    background-color: var(--color-white);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ============================================================
+   GLOBAL MEDIA
+============================================================ */
+
+img,
+picture,
+svg,
+video,
+canvas {
+    display: block;
+
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+
+/* ============================================================
+   GLOBAL FORM ELEMENTS
+============================================================ */
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* ============================================================
+   GLOBAL LINKS
+============================================================ */
+
+a {
+    color: inherit;
+}
+
+
+/* ============================================================
+   GLOBAL CONTAINER
+============================================================ */
+
+.page-container {
+    width: 100%;
+
+    max-width: var(--container-width);
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+
+/* ============================================================
+   RESPONSIVE STANDARD
+
+   480px  = 30rem
+   640px  = 40rem
+   768px  = 48rem
+   1024px = 64rem
+   1280px = 80rem
+   1536px = 96rem
+============================================================ */
+
+
+/* ============================================================
+   TABLET
+   768px and below
+============================================================ */
+
+@media (max-width: 48rem) {
+
+    :root {
+        --container-padding: 24px;
+
+        --section-padding: 72px;
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   640px and below
+============================================================ */
+
+@media (max-width: 40rem) {
+
+    :root {
+        --container-padding: 20px;
+
+        --section-padding: 64px;
+    }
+
+}
+
+
+/* ============================================================
+   COMPACT MOBILE
+   480px and below
+============================================================ */
+
+@media (max-width: 30rem) {
+
+    :root {
+        --container-padding: 16px;
+
+        --section-padding: 56px;
+    }
+
+}
+
+
+/* ============================================================
+   VERY SMALL MOBILE
+   360px and below
+============================================================ */
+
+@media (max-width: 22.5rem) {
+
+    :root {
+        --container-padding: 14px;
+
+        --section-padding: 52px;
+    }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION ACCESSIBILITY
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+
+        scroll-behavior:
+            auto !important;
+    }
+
+}
+
+
+/* ============================================================
+   SHARED SECTION HEADER
+============================================================ */
+
+.section-header {
+    max-width: 820px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.section-heading {
+    margin: 0;
+
+    font-family: var(--font-heading);
+
+    color: var(--color-navy);
+
+    font-size: 56px;
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    letter-spacing: -1.8px;
+}
+
+.section-description {
+    max-width: 760px;
+
+    margin: 22px auto 0;
+
+    color: var(--color-text-secondary);
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    font-weight: 400;
+}
+
+.section-accent {
+    width: 56px;
+    height: 3px;
+
+    margin: 26px auto 0;
+
+    border-radius:
+        var(--radius-pill);
+
+    background-color:
+        var(--color-gold);
+}
+
+
+/* Light Header Variant */
+
+.section-header--light .section-heading {
+    color: var(--color-white);
+}
+
+.section-header--light .section-description {
+    color:
+        var(--color-text-on-dark-secondary);
+}
+
+
+/* ============================================================
+   GLOBAL BUTTON SYSTEM
+============================================================ */
+
+.btn {
+    width: fit-content;
+
+    min-height: 50px;
+
+    padding: 0 24px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border:
+        2px solid
+        transparent;
+
+    border-radius:
+        var(--radius-pill);
+
+    font-family:
+        var(--font-primary);
+
+    font-size: 14px;
+    line-height: 1;
+
+    font-weight: 700;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.btn i {
+    font-size: 12px;
+
+    transition:
+        transform var(--transition-fast);
+}
+
+.btn:hover i.fa-arrow-right {
+    transform:
+        translateX(3px);
+}
+
+
+/* ============================================================
+   PRIMARY BUTTON
+============================================================ */
+
+.btn--primary {
+    border-color:
+        var(--color-gold);
+
+    background-color:
+        var(--color-gold);
+
+    color:
+        var(--color-navy);
+}
+
+.btn--primary:hover {
+    border-color:
+        var(--color-navy);
+
+    background-color:
+        transparent;
+
+    color:
+        var(--color-navy);
+}
+
+
+/* ============================================================
+   SECONDARY BUTTON
+============================================================ */
+
+.btn--secondary {
+    border-color:
+        var(--color-navy);
+
+    background-color:
+        var(--color-navy);
+
+    color:
+        var(--color-white);
+}
+
+.btn--secondary:hover {
+    border-color:
+        var(--color-navy);
+
+    background-color:
+        transparent;
+
+    color:
+        var(--color-navy);
+}
+
+
+/* ============================================================
+   OUTLINE BUTTON
+============================================================ */
+
+.btn--outline {
+    border-color:
+        var(--color-navy);
+
+    background-color:
+        transparent;
+
+    color:
+        var(--color-navy);
+}
+
+.btn--outline:hover {
+    border-color:
+        var(--color-navy);
+
+    background-color:
+        var(--color-navy);
+
+    color:
+        var(--color-white);
+}
+
+
+/* ============================================================
+   LIGHT BUTTON
+============================================================ */
+
+.btn--light {
+    border-color:
+        var(--color-white);
+
+    background-color:
+        var(--color-white);
+
+    color:
+        var(--color-navy);
+}
+
+.btn--light:hover {
+    border-color:
+        var(--color-white);
+
+    background-color:
+        transparent;
+
+    color:
+        var(--color-white);
+}
+
+
+/* ============================================================
+   GOLD BUTTON ON DARK BACKGROUND
+============================================================ */
+
+.btn--accent-dark {
+    border-color:
+        var(--color-gold);
+
+    background-color:
+        var(--color-gold);
+
+    color:
+        var(--color-navy);
+}
+
+.btn--accent-dark:hover {
+    border-color:
+        var(--color-gold);
+
+    background-color:
+        transparent;
+
+    color:
+        var(--color-gold);
+}
+
+
+/* ============================================================
+   SMALL BUTTON
+============================================================ */
+
+.btn--small {
+    min-height: 46px;
+
+    padding: 0 20px;
+
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   UTILITY BAR
+============================================================ */
+
+.utility-bar {
+    width: 100%;
+
+    background-color:
+        var(--color-navy);
+
+    color:
+        var(--color-white);
+}
+
+.utility-bar-container {
+    width: 100%;
+
+    max-width:
+        var(--container-width);
+
+    height: 44px;
+
+    margin: 0 auto;
+
+    padding:
+        0
+        var(--container-padding);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ============================================================
+   UTILITY MESSAGE
+============================================================ */
+
+.utility-bar-message p {
+    margin: 0;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    font-weight: 600;
+}
+
+.utility-bar-message a {
+    color:
+        var(--color-gold);
+
+    text-decoration: none;
+}
+
+
+/* ============================================================
+   UTILITY CONTACTS
+============================================================ */
+
+.utility-bar-contacts {
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+}
+
+.utility-bar-contact {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color:
+        var(--color-white);
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+.utility-bar-contact i {
+    color:
+        var(--color-gold);
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+#header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+.header {
+    width: 100%;
+
+    background-color:
+        var(--color-white);
+
+    border-bottom:
+        1px solid
+        var(--border-light);
+}
+
+.header-container {
+    width: 100%;
+
+    max-width:
+        var(--container-width);
+
+    height: 80px;
+
+    margin: 0 auto;
+
+    padding:
+        0
+        var(--container-padding);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+/* ============================================================
+   HEADER LOGO
+============================================================ */
+
+.header-logo {
+    flex: 0 0 auto;
+}
+
+.header-logo a {
+    display: flex;
+
+    align-items: center;
+
+    text-decoration: none;
+}
+
+.header-logo img {
+    display: block;
+
+    width: auto;
+
+    height: 48px;
+}
+
+
+/* ============================================================
+   HEADER ACTIONS
+============================================================ */
+
+.header-actions {
+    min-width: 0;
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* ============================================================
+   HEADER NAVIGATION
+============================================================ */
+
+.header-navigation {
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.header-navigation a {
+    height: 36px;
+
+    padding:
+        0
+        14px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto;
+
+    border:
+        1px solid
+        transparent;
+
+    border-radius:
+        var(--radius-pill);
+
+    color:
+        var(--color-navy);
+
+    font-size: 14px;
+    line-height: 1;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast);
+}
+
+.header-navigation a:hover {
+    border-color:
+        var(--color-navy);
+}
+
+.header-navigation a.active {
+    border-color:
+        var(--color-navy);
+
+    background-color:
+        var(--color-navy);
+
+    color:
+        var(--color-white);
+}
+
+
+/* ============================================================
+   HEADER CONTROLS
+============================================================ */
+
+.header-controls {
+    flex: 0 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+/* ============================================================
+   LANGUAGE SWITCHER
+============================================================ */
+
+.language-switcher {
+    height: 36px;
+
+    padding: 3px;
+
+    display: flex;
+
+    align-items: center;
+
+    flex: 0 0 auto;
+
+    border:
+        1px solid
+        var(--color-navy);
+
+    border-radius:
+        var(--radius-pill);
+}
+
+.language-switcher button {
+    height: 28px;
+
+    padding:
+        0
+        10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+
+    border-radius:
+        var(--radius-pill);
+
+    background-color:
+        transparent;
+
+    color:
+        var(--color-navy);
+
+    font-family: inherit;
+
+    font-size: 12px;
+    line-height: 1;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-fast),
+        color var(--transition-fast);
+}
+
+.language-switcher button.active {
+    background-color:
+        var(--color-navy);
+
+    color:
+        var(--color-white);
+}
+
+
+/* ============================================================
+   RESPONSIVE CONTROLS
+   Hidden on Desktop
+============================================================ */
+
+.mobile-menu-toggle,
+.mobile-menu-close,
+.mobile-menu-header,
+.mobile-menu-logo {
+    display: none;
+}
+
+
+/* ============================================================
+   RESPONSIVE HEADER
+   1024px and below
+============================================================ */
+
+@media (max-width: 64rem) {
+
+    /* --------------------------------------------------------
+       Hide Utility Bar Completely
+    -------------------------------------------------------- */
+
+    #utility-bar {
+        display: none;
+    }
+
+
+    /* --------------------------------------------------------
+       Main Header
+    -------------------------------------------------------- */
+
+    .header-container {
+        height: 72px;
+
+        gap: 12px;
+    }
+
+
+    /* --------------------------------------------------------
+       Main Logo
+    -------------------------------------------------------- */
+
+    .header-logo {
+        margin-right: auto;
+    }
+
+    .header-logo img {
+        height: 44px;
+    }
+
+
+    /* --------------------------------------------------------
+       Header Controls
+       Language + Hamburger
+    -------------------------------------------------------- */
+
+    .header-controls {
+        margin-left: auto;
+
+        gap: 14px;
+    }
+
+
+    /* --------------------------------------------------------
+       Language Selector
+       Remains Outside Fullscreen Menu
+    -------------------------------------------------------- */
+
+    .language-switcher {
+        height: 36px;
+
+        padding: 3px;
+    }
+
+    .language-switcher button {
+        height: 28px;
+
+        padding:
+            0
+            10px;
+
+        font-size: 12px;
+    }
+
+
+    /* --------------------------------------------------------
+       Hamburger Button
+       Exactly 36px High
+    -------------------------------------------------------- */
+
+    .mobile-menu-toggle {
+        width: 36px;
+        height: 36px;
+
+        flex: 0 0 36px;
+
+        padding: 0;
+
+        display: inline-flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 4px;
+
+        border:
+            1px solid
+            var(--color-navy);
+
+        border-radius: 8px;
+
+        background-color:
+            var(--color-white);
+
+        color:
+            var(--color-navy);
+
+        cursor: pointer;
+
+        transition:
+            background-color var(--transition-fast),
+            color var(--transition-fast),
+            transform var(--transition-fast);
+    }
+
+    .mobile-menu-toggle:hover {
+        background-color:
+            var(--color-navy);
+
+        color:
+            var(--color-white);
+    }
+
+    .mobile-menu-toggle:active {
+        transform:
+            scale(0.96);
+    }
+
+    .mobile-menu-toggle:focus-visible {
+        outline:
+            2px solid
+            var(--color-gold);
+
+        outline-offset: 3px;
+    }
+
+    .mobile-menu-toggle span {
+        width: 18px;
+        height: 2px;
+
+        display: block;
+
+        border-radius:
+            var(--radius-pill);
+
+        background-color:
+            currentColor;
+    }
+
+
+    /* --------------------------------------------------------
+       Fullscreen Menu
+       Slides in from Left
+    -------------------------------------------------------- */
+
+    .header-actions {
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 2000;
+
+        width: 100vw;
+
+        height: 100vh;
+        height: 100dvh;
+
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        overscroll-behavior: contain;
+
+        background-color:
+            rgba(255, 255, 255, 0.94);
+
+        -webkit-backdrop-filter:
+            blur(14px);
+
+        backdrop-filter:
+            blur(14px);
+
+        transform:
+            translateX(-100%);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transition:
+            transform
+            0.38s
+            cubic-bezier(0.22, 1, 0.36, 1),
+
+            opacity
+            0.28s
+            ease,
+
+            visibility
+            0s
+            linear
+            0.38s;
+    }
+
+
+    /* --------------------------------------------------------
+       Open Menu
+    -------------------------------------------------------- */
+
+    .header-actions.is-open {
+        transform:
+            translateX(0);
+
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transition:
+            transform
+            0.38s
+            cubic-bezier(0.22, 1, 0.36, 1),
+
+            opacity
+            0.28s
+            ease,
+
+            visibility
+            0s
+            linear
+            0s;
+    }
+
+
+    /* --------------------------------------------------------
+       Fullscreen Menu Header
+    -------------------------------------------------------- */
+
+    .mobile-menu-header {
+        width: 100%;
+
+        min-height: 72px;
+
+        padding:
+            0
+            var(--container-padding);
+
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        flex: 0 0 auto;
+
+        border-bottom:
+            1px solid
+            var(--border-light);
+    }
+
+
+    /* --------------------------------------------------------
+       Sidebar Logo
+    -------------------------------------------------------- */
+
+    .mobile-menu-logo {
+        display: flex;
+
+        align-items: center;
+
+        text-decoration: none;
+    }
+
+    .mobile-menu-logo img {
+        display: block;
+
+        width: auto;
+
+        height: 44px;
+    }
+
+
+    /* --------------------------------------------------------
+       Close Button
+       Same 36px Size as Hamburger
+    -------------------------------------------------------- */
+
+    .mobile-menu-close {
+        position: relative;
+
+        width: 36px;
+        height: 36px;
+
+        flex: 0 0 36px;
+
+        margin: 0;
+        padding: 0;
+
+        display: inline-flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border:
+            1px solid
+            var(--color-navy);
+
+        border-radius: 8px;
+
+        background-color:
+            transparent;
+
+        color:
+            var(--color-navy);
+
+        cursor: pointer;
+
+        transition:
+            background-color var(--transition-fast),
+            color var(--transition-fast),
+            transform var(--transition-fast);
+    }
+
+    .mobile-menu-close::before,
+    .mobile-menu-close::after {
+        content: "";
+
+        position: absolute;
+
+        width: 18px;
+        height: 2px;
+
+        border-radius:
+            var(--radius-pill);
+
+        background-color:
+            currentColor;
+    }
+
+    .mobile-menu-close::before {
+        transform:
+            rotate(45deg);
+    }
+
+    .mobile-menu-close::after {
+        transform:
+            rotate(-45deg);
+    }
+
+    .mobile-menu-close:hover {
+        background-color:
+            var(--color-navy);
+
+        color:
+            var(--color-white);
+    }
+
+    .mobile-menu-close:active {
+        transform:
+            scale(0.96);
+    }
+
+    .mobile-menu-close:focus-visible {
+        outline:
+            2px solid
+            var(--color-gold);
+
+        outline-offset: 3px;
+    }
+
+
+    /* --------------------------------------------------------
+       Responsive Navigation
+    -------------------------------------------------------- */
+
+    .header-navigation {
+        width: calc(
+            100% -
+            (var(--container-padding) * 2)
+        );
+
+        max-width: 720px;
+
+        margin:
+            34px
+            auto
+            40px;
+
+        padding: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 4px;
+    }
+
+    .header-navigation a {
+        width: 100%;
+
+        min-height: 48px;
+        height: auto;
+
+        padding:
+            0
+            16px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        border:
+            1px solid
+            transparent;
+
+        border-radius: 12px;
+
+        color:
+            var(--color-navy);
+
+        font-size: 16px;
+        line-height: 1.2;
+
+        font-weight: 600;
+
+        text-align: left;
+
+        white-space: normal;
+
+        transition:
+            background-color var(--transition-fast),
+            border-color var(--transition-fast),
+            color var(--transition-fast),
+            transform var(--transition-fast);
+    }
+
+    .header-navigation a:hover {
+        border-color:
+            transparent;
+
+        background-color:
+            rgba(0, 12, 64, 0.055);
+
+        transform:
+            translateX(4px);
+    }
+
+    .header-navigation a.active {
+        border-color:
+            var(--color-navy);
+
+        background-color:
+            var(--color-navy);
+
+        color:
+            var(--color-white);
+
+        transform: none;
+    }
+
+}
+
+
+/* ============================================================
+   LOCK PAGE WHILE MENU IS OPEN
+============================================================ */
+
+body.mobile-menu-open {
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   MOBILE HEADER
+   640px and below
+============================================================ */
+
+@media (max-width: 40rem) {
+
+    .header-container {
+        height: 66px;
+    }
+
+    .header-logo img {
+        height: 41px;
+    }
+
+    .mobile-menu-header {
+        min-height: 66px;
+    }
+
+    .mobile-menu-logo img {
+        height: 41px;
+    }
+
+    .header-navigation {
+        margin-top: 24px;
+
+        margin-bottom: 30px;
+    }
+
+    .header-navigation a {
+        min-height: 46px;
+
+        padding:
+            0
+            14px;
+
+        font-size: 15px;
+    }
+
+}
+
+
+/* ============================================================
+   COMPACT MOBILE HEADER
+   480px and below
+============================================================ */
+
+@media (max-width: 30rem) {
+
+    .header-container {
+        height: 64px;
+    }
+
+    .header-logo img {
+        height: 39px;
+    }
+
+    .header-controls {
+        gap: 12px;
+    }
+
+    .language-switcher button {
+        padding:
+            0
+            8px;
+
+        font-size: 11px;
+    }
+
+    .mobile-menu-header {
+        min-height: 64px;
+    }
+
+    .mobile-menu-logo img {
+        height: 39px;
+    }
+
+    .header-navigation {
+        margin-top: 20px;
+    }
+
+    .header-navigation a {
+        min-height: 44px;
+
+        padding:
+            0
+            12px;
+
+        font-size: 15px;
+    }
+
+}
+
+
+/* ============================================================
+   FOOTER
+============================================================ */
+
+.footer {
+    width: 100%;
+
+    background-color:
+        var(--color-navy);
+
+    color:
+        var(--color-white);
+}
+
+
+/* ============================================================
+   FOOTER CONTAINER
+============================================================ */
+
+.footer-container {
+    width:
+        calc(
+            100% -
+            (var(--container-padding) * 2)
+        );
+
+    max-width:
+        calc(
+            var(--container-width) -
+            (var(--container-padding) * 2)
+        );
+
+    margin: 0 auto;
+
+    padding:
+        30px
+        0
+        28px;
+
+    border-top:
+        1px solid
+        var(--border-dark);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 32px;
+}
+
+
+/* ============================================================
+   FOOTER COPYRIGHT
+============================================================ */
+
+.footer-copyright {
+    flex: 0 0 auto;
+
+    margin: 0;
+    padding: 0;
+
+    color:
+        var(--color-text-on-dark-secondary);
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    font-weight: 400;
+
+    white-space: nowrap;
+}
+
+
+/* ============================================================
+   FOOTER NAVIGATION
+============================================================ */
+
+.footer-navigation {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    text-align: right;
+}
+
+.footer-navigation a {
+    color:
+        var(--color-text-on-dark-secondary);
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        color
+        var(--transition-fast);
+}
+
+.footer-navigation a:hover {
+    color:
+        var(--color-gold);
+}
+
+.footer-navigation a:focus-visible {
+    color:
+        var(--color-gold);
+
+    outline:
+        2px solid
+        var(--color-gold);
+
+    outline-offset: 4px;
+
+    border-radius: 3px;
+}
+
+.footer-navigation span {
+    color:
+        rgba(255, 255, 255, 0.34);
+
+    font-size: 13px;
+    line-height: 1;
+
+    user-select: none;
+}
+
+
+/* ============================================================
+   FOOTER — 1024px and below
+============================================================ */
+
+@media (max-width: 64rem) {
+
+    .footer-container {
+        padding-top: 28px;
+
+        padding-bottom: 26px;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 22px;
+
+        text-align: center;
+    }
+
+    .footer-navigation {
+        order: 1;
+
+        width: 100%;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .footer-copyright {
+        order: 2;
+
+        text-align: center;
+
+        white-space: normal;
+    }
+
+}
+
+
+/* ============================================================
+   FOOTER — TABLET
+============================================================ */
+
+@media (max-width: 48rem) {
+
+    .footer-container {
+        padding-top: 26px;
+
+        padding-bottom: 24px;
+
+        gap: 22px;
+    }
+
+    .footer-navigation {
+        max-width: 600px;
+
+        margin: 0 auto;
+
+        gap: 8px;
+    }
+
+}
+
+
+/* ============================================================
+   FOOTER — MOBILE
+============================================================ */
+
+@media (max-width: 40rem) {
+
+    .footer-container {
+        padding-top: 24px;
+
+        padding-bottom: 22px;
+
+        gap: 20px;
+    }
+
+    .footer-navigation {
+        max-width: 440px;
+
+        gap:
+            8px
+            6px;
+    }
+
+}
+
+
+/* ============================================================
+   FOOTER — COMPACT MOBILE
+============================================================ */
+
+@media (max-width: 30rem) {
+
+    .footer-container {
+        padding-top: 22px;
+
+        padding-bottom: 20px;
+
+        gap: 20px;
+    }
+
+    .footer-navigation {
+        max-width: 340px;
+
+        row-gap: 9px;
+
+        column-gap: 6px;
+    }
+
+}
+
+
+/* ============================================================
+   FOOTER — VERY SMALL MOBILE
+============================================================ */
+
+@media (max-width: 22.5rem) {
+
+    .footer-navigation {
+        max-width: 300px;
+    }
+
+}

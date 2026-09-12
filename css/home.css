@@ -1,0 +1,1159 @@
+/* ============================================================
+   HERO
+============================================================ */
+
+.hero-section {
+    width: 100%;
+
+    padding: var(--section-padding) 0;
+
+    background-color: var(--color-white);
+
+    background-image:
+        linear-gradient(
+            rgba(74, 211, 255, 0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(74, 211, 255, 0.08) 1px,
+            transparent 1px
+        );
+
+    background-size: 40px 40px;
+}
+
+
+/* ============================================================
+   HERO CONTAINER
+============================================================ */
+
+.hero-container {
+    width: 100%;
+    max-width: var(--container-width);
+
+    margin: 0 auto;
+
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   HERO BADGE
+============================================================ */
+
+.hero-badge {
+    width: fit-content;
+    max-width: 100%;
+
+    margin: 0 auto 22px;
+
+    padding: 11px 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    border-radius: var(--radius-pill);
+
+    background-color: var(--color-navy);
+    color: var(--color-white);
+
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+
+    text-align: center;
+}
+
+.hero-badge i {
+    flex-shrink: 0;
+
+    color: var(--color-gold);
+
+    font-size: 5px;
+}
+
+
+/* ============================================================
+   HERO HEADING
+============================================================ */
+
+.hero-heading {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    font-family: var(--font-heading);
+
+    color: var(--color-navy);
+
+    font-size: clamp(
+        42px,
+        2rem + 3vw,
+        76px
+    );
+
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    letter-spacing: clamp(
+        -2.5px,
+        -0.15vw,
+        -1px
+    );
+
+    overflow-wrap: break-word;
+
+    text-wrap: balance;
+}
+
+
+/* ============================================================
+   HERO DESCRIPTION
+============================================================ */
+
+.hero-description {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 20px auto 0;
+
+    color: rgba(0, 12, 64, 0.78);
+
+    font-size: clamp(
+        16px,
+        0.95rem + 0.2vw,
+        18px
+    );
+
+    line-height: 1.7;
+
+    font-weight: 400;
+
+    overflow-wrap: break-word;
+
+    text-wrap: pretty;
+}
+
+
+/* ============================================================
+   HERO ACTIONS
+============================================================ */
+
+.hero-actions {
+    width: 100%;
+
+    margin-top: 26px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+
+/* ============================================================
+   ABOUT
+============================================================ */
+
+.about-section {
+    width: 100%;
+
+    padding: var(--section-padding) 0;
+
+    background-color: var(--color-navy);
+}
+
+
+/* ============================================================
+   ABOUT CONTAINER
+============================================================ */
+
+.about-container {
+    width: 100%;
+    max-width: var(--container-width);
+
+    margin: 0 auto;
+
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(360px, 1fr);
+
+    gap: clamp(
+        40px,
+        4vw,
+        56px
+    );
+
+    align-items: stretch;
+}
+
+
+/* ============================================================
+   ABOUT CONTENT
+============================================================ */
+
+.about-content {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* ============================================================
+   ABOUT BADGE
+============================================================ */
+
+.about-badge {
+    width: fit-content;
+    max-width: 100%;
+
+    margin-bottom: 22px;
+
+    padding: 11px 20px;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    border-radius: var(--radius-pill);
+
+    background-color: var(--color-white);
+    color: var(--color-navy);
+
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+.about-badge i {
+    flex-shrink: 0;
+
+    color: var(--color-gold);
+
+    font-size: 5px;
+}
+
+
+/* ============================================================
+   ABOUT HEADING
+============================================================ */
+
+.about-heading {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0;
+
+    font-family: var(--font-heading);
+
+    color: var(--color-white);
+
+    font-size: clamp(
+        40px,
+        2rem + 1.7vw,
+        56px
+    );
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    letter-spacing: clamp(
+        -1.8px,
+        -0.1vw,
+        -0.8px
+    );
+
+    overflow-wrap: break-word;
+
+    text-wrap: balance;
+}
+
+
+/* ============================================================
+   ABOUT DESCRIPTION
+============================================================ */
+
+.about-description {
+    width: 100%;
+    max-width: 680px;
+
+    margin: 20px 0 0;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: clamp(
+        16px,
+        0.95rem + 0.2vw,
+        18px
+    );
+
+    line-height: 1.75;
+
+    font-weight: 400;
+
+    overflow-wrap: break-word;
+
+    text-wrap: pretty;
+}
+
+
+/* ============================================================
+   ABOUT FOCUS POINTS
+============================================================ */
+
+.about-points {
+    width: 100%;
+    max-width: 680px;
+
+    margin: 22px 0 0;
+
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    list-style: none;
+}
+
+.about-point {
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    color: rgba(255, 255, 255, 0.86);
+
+    font-size: clamp(
+        15px,
+        0.9rem + 0.15vw,
+        16px
+    );
+
+    line-height: 1.6;
+
+    font-weight: 500;
+}
+
+.about-point-icon {
+    width: 20px;
+    height: 20px;
+
+    flex: 0 0 20px;
+
+    margin-top: 5px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    background-color: var(--color-gold);
+
+    color: var(--color-navy);
+}
+
+.about-point-icon i {
+    font-size: 9px;
+
+    font-weight: 900;
+}
+
+
+/* ============================================================
+   ABOUT ECOSYSTEM DESCRIPTION
+============================================================ */
+
+.about-description--ecosystem {
+    margin-top: 22px;
+}
+
+
+/* ============================================================
+   ABOUT CTA
+============================================================ */
+
+.about-cta {
+    margin-top: 28px;
+}
+
+
+/* ============================================================
+   ABOUT FACTS
+============================================================ */
+
+.about-info-row {
+    width: 100%;
+    max-width: 680px;
+
+    margin-top: 36px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+
+/* ============================================================
+   ABOUT FACT CARD
+============================================================ */
+
+.about-info {
+    width: 100%;
+    min-width: 0;
+
+    padding: clamp(
+        22px,
+        2vw,
+        28px
+    );
+
+    border:
+        1px
+        solid
+        rgba(255, 255, 255, 0.18);
+
+    border-radius: 20px;
+
+    background-color: transparent;
+}
+
+.about-info span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 11px;
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+.about-info strong {
+    display: block;
+
+    font-family: var(--font-heading);
+
+    color: var(--color-white);
+
+    font-size: clamp(
+        24px,
+        1.2rem + 1vw,
+        30px
+    );
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+
+    overflow-wrap: break-word;
+}
+
+
+/* ============================================================
+   ABOUT PRESENCE CARD
+============================================================ */
+
+.about-presence-card {
+    width: 100%;
+    min-width: 0;
+
+    padding: clamp(
+        28px,
+        2.5vw,
+        36px
+    );
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 28px;
+
+    background-color: var(--color-white);
+}
+
+
+/* ============================================================
+   ABOUT PRESENCE BADGE
+============================================================ */
+
+.about-presence-badge {
+    width: fit-content;
+    max-width: 100%;
+
+    padding: 11px 20px;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    border-radius: var(--radius-pill);
+
+    background-color: var(--color-navy);
+    color: var(--color-white);
+
+    font-size: 12px;
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+.about-presence-badge i {
+    flex-shrink: 0;
+
+    color: var(--color-gold);
+
+    font-size: 5px;
+}
+
+
+/* ============================================================
+   ABOUT PRESENCE HEADING
+============================================================ */
+
+.about-presence-heading {
+    margin: 16px 0 0;
+
+    font-family: var(--font-heading);
+
+    color: var(--color-navy);
+
+    font-size: clamp(
+        32px,
+        1.65rem + 1.25vw,
+        40px
+    );
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+    overflow-wrap: break-word;
+
+    text-wrap: balance;
+}
+
+
+/* ============================================================
+   ABOUT PRESENCE DIVIDER
+============================================================ */
+
+.about-presence-divider {
+    width: 100%;
+    height: 1px;
+
+    margin-top: 22px;
+
+    background-color: var(--border-light);
+}
+
+
+/* ============================================================
+   ABOUT MAP
+============================================================ */
+
+.about-map {
+    width: 100%;
+    min-width: 0;
+
+    flex: 1;
+
+    min-height: clamp(
+        300px,
+        30vw,
+        500px
+    );
+
+    padding-top: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.about-map img {
+    width: 100%;
+    height: auto;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* ============================================================
+   LAPTOP / SMALL DESKTOP
+   1024px AND BELOW
+============================================================ */
+
+@media (max-width: 64rem) {
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 44px;
+    }
+
+    .about-heading,
+    .about-description,
+    .about-points,
+    .about-info-row {
+        max-width: 100%;
+    }
+
+    .about-presence-card {
+        min-height: auto;
+    }
+
+    .about-map {
+        min-height: 400px;
+    }
+
+}
+
+
+/* ============================================================
+   TABLET
+   768px AND BELOW
+============================================================ */
+
+@media (max-width: 48rem) {
+
+    /* ========================================
+       Hero
+    ======================================== */
+
+    .hero-heading {
+        max-width: 700px;
+
+        font-size: clamp(
+            44px,
+            7.5vw,
+            58px
+        );
+    }
+
+    .hero-description {
+        max-width: 620px;
+
+        font-size: 16px;
+    }
+
+
+    /* ========================================
+       About
+    ======================================== */
+
+    .about-container {
+        gap: 40px;
+    }
+
+    .about-heading {
+        font-size: clamp(
+            38px,
+            6vw,
+            48px
+        );
+    }
+
+    .about-description {
+        font-size: 16px;
+    }
+
+    .about-map {
+        min-height: 330px;
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   640px AND BELOW
+============================================================ */
+
+@media (max-width: 40rem) {
+
+    /* ========================================
+       Hero
+    ======================================== */
+
+    .hero-section {
+        background-size: 32px 32px;
+    }
+
+    .hero-badge {
+        margin-bottom: 20px;
+
+        padding: 10px 16px;
+
+        gap: 8px;
+
+        font-size: 11px;
+
+        letter-spacing: 1.1px;
+    }
+
+    .hero-heading {
+        max-width: 100%;
+
+        font-size: clamp(
+            40px,
+            10vw,
+            48px
+        );
+
+        line-height: 1.08;
+
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        max-width: 100%;
+
+        margin-top: 18px;
+
+        font-size: 16px;
+
+        line-height: 1.65;
+    }
+
+    .hero-actions {
+        margin-top: 24px;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .hero-actions > * {
+        width: 100%;
+
+        max-width: 360px;
+    }
+
+
+    /* ========================================
+       About
+    ======================================== */
+
+    .about-container {
+        gap: 36px;
+    }
+
+    .about-badge {
+        margin-bottom: 20px;
+
+        padding: 10px 16px;
+
+        gap: 8px;
+
+        font-size: 11px;
+
+        letter-spacing: 1.1px;
+    }
+
+    .about-heading {
+        max-width: 100%;
+
+        font-size: clamp(
+            36px,
+            9vw,
+            44px
+        );
+
+        line-height: 1.1;
+
+        letter-spacing: -1px;
+    }
+
+    .about-description {
+        max-width: 100%;
+
+        margin-top: 18px;
+
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+    .about-points {
+        max-width: 100%;
+
+        margin-top: 20px;
+    }
+
+    .about-point {
+        gap: 12px;
+
+        font-size: 15px;
+    }
+
+    .about-description--ecosystem {
+        margin-top: 20px;
+    }
+
+    .about-cta {
+        margin-top: 26px;
+    }
+
+
+    /* ========================================
+       About Facts
+    ======================================== */
+
+    .about-info-row {
+        max-width: 100%;
+
+        margin-top: 32px;
+
+        grid-template-columns: 1fr;
+    }
+
+    .about-info {
+        padding: 24px;
+    }
+
+
+    /* ========================================
+       About Presence
+    ======================================== */
+
+    .about-presence-card {
+        padding: 24px;
+
+        border-radius: 24px;
+    }
+
+    .about-presence-badge {
+        padding: 10px 16px;
+
+        gap: 8px;
+
+        font-size: 11px;
+
+        letter-spacing: 1.1px;
+    }
+
+    .about-presence-heading {
+        font-size: 32px;
+
+        line-height: 1.1;
+    }
+
+    .about-presence-divider {
+        margin-top: 20px;
+    }
+
+    .about-map {
+        min-height: 270px;
+
+        padding-top: 18px;
+    }
+
+}
+
+
+/* ============================================================
+   COMPACT MOBILE
+   480px AND BELOW
+============================================================ */
+
+@media (max-width: 30rem) {
+
+    /* ========================================
+       Hero
+    ======================================== */
+
+    .hero-section {
+        background-size: 28px 28px;
+    }
+
+    .hero-badge {
+        margin-bottom: 18px;
+
+        padding: 9px 14px;
+
+        font-size: 10px;
+
+        letter-spacing: 1px;
+    }
+
+    .hero-heading {
+        font-size: clamp(
+            36px,
+            10vw,
+            42px
+        );
+
+        line-height: 1.1;
+
+        letter-spacing: -1.2px;
+    }
+
+    .hero-description {
+        margin-top: 16px;
+
+        font-size: 15px;
+    }
+
+    .hero-actions {
+        margin-top: 22px;
+    }
+
+
+    /* ========================================
+       About
+    ======================================== */
+
+    .about-container {
+        gap: 32px;
+    }
+
+    .about-badge {
+        margin-bottom: 18px;
+
+        padding: 9px 14px;
+
+        font-size: 10px;
+
+        letter-spacing: 1px;
+    }
+
+    .about-heading {
+        font-size: clamp(
+            32px,
+            9vw,
+            38px
+        );
+    }
+
+    .about-description {
+        margin-top: 16px;
+
+        font-size: 15px;
+    }
+
+    .about-points {
+        margin-top: 18px;
+    }
+
+    .about-point {
+        font-size: 15px;
+    }
+
+    .about-point-icon {
+        margin-top: 4px;
+    }
+
+    .about-description--ecosystem {
+        margin-top: 18px;
+    }
+
+    .about-cta {
+        margin-top: 24px;
+    }
+
+
+    /* ========================================
+       About Facts
+    ======================================== */
+
+    .about-info-row {
+        margin-top: 28px;
+    }
+
+    .about-info {
+        padding: 22px;
+
+        border-radius: 18px;
+    }
+
+    .about-info strong {
+        font-size: 25px;
+    }
+
+
+    /* ========================================
+       About Presence
+    ======================================== */
+
+    .about-presence-card {
+        padding: 20px;
+
+        border-radius: 20px;
+    }
+
+    .about-presence-badge {
+        padding: 9px 14px;
+
+        font-size: 10px;
+
+        letter-spacing: 1px;
+    }
+
+    .about-presence-heading {
+        font-size: 29px;
+    }
+
+    .about-map {
+        min-height: 235px;
+
+        padding-top: 16px;
+    }
+
+}
+
+
+/* ============================================================
+   VERY SMALL MOBILE
+   360px AND BELOW
+============================================================ */
+
+@media (max-width: 22.5rem) {
+
+    .hero-heading {
+        font-size: 34px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-badge,
+    .about-badge,
+    .about-presence-badge {
+        padding: 9px 12px;
+
+        font-size: 9px;
+
+        letter-spacing: 0.9px;
+    }
+
+    .about-heading {
+        font-size: 31px;
+    }
+
+    .about-presence-card {
+        padding: 18px;
+    }
+
+    .about-presence-heading {
+        font-size: 27px;
+    }
+
+    .about-map {
+        min-height: 215px;
+    }
+
+}
+
+
+/* ============================================================
+   SHORT LAPTOP VIEWPORT
+   Keeps CTA/content higher on laptop screens
+============================================================ */
+
+@media (min-width: 64.0625rem) and (max-height: 900px) {
+
+    /* ========================================
+       Hero
+    ======================================== */
+
+    .hero-section {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    .hero-badge {
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        margin-top: 18px;
+    }
+
+    .hero-actions {
+        margin-top: 24px;
+    }
+
+
+    /* ========================================
+       About
+    ======================================== */
+
+    .about-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .about-badge {
+        margin-bottom: 20px;
+    }
+
+    .about-description {
+        margin-top: 18px;
+    }
+
+    .about-points {
+        margin-top: 20px;
+    }
+
+    .about-description--ecosystem {
+        margin-top: 20px;
+    }
+
+    .about-cta {
+        margin-top: 26px;
+    }
+
+    .about-info-row {
+        margin-top: 32px;
+    }
+
+}
