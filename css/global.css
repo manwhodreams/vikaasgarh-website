@@ -1082,64 +1082,117 @@ a {
        Slides in from Left
     -------------------------------------------------------- */
 
-    .header-actions {
-        position: fixed;
+.header-actions {
+    position: fixed;
 
-        inset: 0;
+    inset: 0;
 
-        z-index: 2000;
+    z-index: 2000;
 
-        width: 100vw;
+    width: 100vw;
 
-        height: 100vh;
-        height: 100dvh;
+    height: 100vh;
+    height: 100dvh;
 
-        margin: 0;
-        padding: 0;
+    margin: 0;
+    padding: 0;
 
-        display: flex;
+    display: flex;
+    flex-direction: column;
 
-        flex-direction: column;
+    align-items: stretch;
 
-        align-items: stretch;
+    overflow-x: hidden;
+    overflow-y: auto;
 
-        overflow-x: hidden;
-        overflow-y: auto;
+    overscroll-behavior: contain;
 
-        overscroll-behavior: contain;
+    background-color:
+        rgba(255, 255, 255, 0.94);
 
-        background-color:
-            rgba(255, 255, 255, 0.94);
+    -webkit-backdrop-filter:
+        blur(14px);
 
-        -webkit-backdrop-filter:
-            blur(14px);
+    backdrop-filter:
+        blur(14px);
 
-        backdrop-filter:
-            blur(14px);
+    /*
+       Closed position
+    */
 
-        transform:
-            translateX(-100%);
+    transform:
+        translate3d(-100%, 0, 0);
 
-        opacity: 0;
+    opacity: 0;
 
-        visibility: hidden;
+    visibility: hidden;
 
-        pointer-events: none;
+    pointer-events: none;
 
-        transition:
-            transform
-            0.38s
-            cubic-bezier(0.22, 1, 0.36, 1),
+    /*
+       Helps browser prepare the animation.
+    */
 
-            opacity
-            0.28s
-            ease,
+    will-change:
+        transform,
+        opacity;
 
-            visibility
-            0s
-            linear
-            0.38s;
-    }
+    /*
+       Smooth closing animation.
+
+       Visibility changes only AFTER
+       slide/fade finishes.
+    */
+
+    transition:
+        transform
+        0.45s
+        cubic-bezier(0.76, 0, 0.24, 1),
+
+        opacity
+        0.32s
+        ease,
+
+        visibility
+        0s
+        linear
+        0.45s;
+}
+
+
+/* ========================================================
+   OPEN FULLSCREEN MENU
+======================================================== */
+
+.header-actions.is-open {
+    transform:
+        translate3d(0, 0, 0);
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    /*
+       Visibility becomes active immediately,
+       then slide/fade animation begins.
+    */
+
+    transition:
+        transform
+        0.45s
+        cubic-bezier(0.22, 1, 0.36, 1),
+
+        opacity
+        0.32s
+        ease,
+
+        visibility
+        0s
+        linear
+        0s;
+}
 
 
     /* --------------------------------------------------------
