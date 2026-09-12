@@ -24,7 +24,8 @@
 
     /* Text Colors */
 
-    --color-text: var(--color-navy);
+    --color-text:
+        var(--color-navy);
 
     --color-text-secondary:
         rgba(0, 12, 64, 0.70);
@@ -126,11 +127,14 @@ body {
 
     overflow-x: hidden;
 
-    font-family: var(--font-primary);
+    font-family:
+        var(--font-primary);
 
-    color: var(--color-text);
+    color:
+        var(--color-text);
 
-    background-color: var(--color-white);
+    background-color:
+        var(--color-white);
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -188,13 +192,17 @@ a {
 .page-container {
     width: 100%;
 
-    max-width: var(--container-width);
+    max-width:
+        var(--container-width);
 
     margin-left: auto;
     margin-right: auto;
 
-    padding-left: var(--container-padding);
-    padding-right: var(--container-padding);
+    padding-left:
+        var(--container-padding);
+
+    padding-right:
+        var(--container-padding);
 }
 
 
@@ -318,9 +326,11 @@ a {
 .section-heading {
     margin: 0;
 
-    font-family: var(--font-heading);
+    font-family:
+        var(--font-heading);
 
-    color: var(--color-navy);
+    color:
+        var(--color-navy);
 
     font-size: 56px;
     line-height: 1.08;
@@ -335,7 +345,8 @@ a {
 
     margin: 22px auto 0;
 
-    color: var(--color-text-secondary);
+    color:
+        var(--color-text-secondary);
 
     font-size: 17px;
     line-height: 1.7;
@@ -357,10 +368,13 @@ a {
 }
 
 
-/* Light Header Variant */
+/* ============================================================
+   LIGHT SECTION HEADER
+============================================================ */
 
 .section-header--light .section-heading {
-    color: var(--color-white);
+    color:
+        var(--color-white);
 }
 
 .section-header--light .section-description {
@@ -378,7 +392,9 @@ a {
 
     min-height: 50px;
 
-    padding: 0 24px;
+    padding:
+        0
+        24px;
 
     display: inline-flex;
 
@@ -421,7 +437,8 @@ a {
     font-size: 12px;
 
     transition:
-        transform var(--transition-fast);
+        transform
+        var(--transition-fast);
 }
 
 .btn:hover i.fa-arrow-right {
@@ -572,7 +589,9 @@ a {
 .btn--small {
     min-height: 46px;
 
-    padding: 0 20px;
+    padding:
+        0
+        20px;
 
     font-size: 13px;
 }
@@ -600,7 +619,9 @@ a {
 
     height: 44px;
 
-    margin: 0 auto;
+    margin:
+        0
+        auto;
 
     padding:
         0
@@ -705,7 +726,9 @@ a {
 
     height: 80px;
 
-    margin: 0 auto;
+    margin:
+        0
+        auto;
 
     padding:
         0
@@ -724,7 +747,10 @@ a {
 ============================================================ */
 
 .header-logo {
-    flex: 0 0 auto;
+    flex:
+        0
+        0
+        auto;
 }
 
 .header-logo a {
@@ -785,7 +811,10 @@ a {
     align-items: center;
     justify-content: center;
 
-    flex: 0 0 auto;
+    flex:
+        0
+        0
+        auto;
 
     border:
         1px solid
@@ -834,7 +863,10 @@ a {
 ============================================================ */
 
 .header-controls {
-    flex: 0 0 auto;
+    flex:
+        0
+        0
+        auto;
 
     display: flex;
 
@@ -857,7 +889,10 @@ a {
 
     align-items: center;
 
-    flex: 0 0 auto;
+    flex:
+        0
+        0
+        auto;
 
     border:
         1px solid
@@ -943,7 +978,7 @@ a {
 
 
     /* --------------------------------------------------------
-       Main Header
+       Header
     -------------------------------------------------------- */
 
     .header-container {
@@ -954,7 +989,7 @@ a {
 
 
     /* --------------------------------------------------------
-       Main Logo
+       Logo
     -------------------------------------------------------- */
 
     .header-logo {
@@ -967,49 +1002,18 @@ a {
 
 
     /* --------------------------------------------------------
-       Header Controls
-       Language + Hamburger
-    -------------------------------------------------------- */
-
-    .header-controls {
-        margin-left: auto;
-
-        gap: 14px;
-    }
-
-
-    /* --------------------------------------------------------
-       Language Selector
-       Remains Outside Fullscreen Menu
-    -------------------------------------------------------- */
-
-    .language-switcher {
-        height: 36px;
-
-        padding: 3px;
-    }
-
-    .language-switcher button {
-        height: 28px;
-
-        padding:
-            0
-            10px;
-
-        font-size: 12px;
-    }
-
-
-    /* --------------------------------------------------------
        Hamburger Button
-       Exactly 36px High
+       Same Height as Language Selector
     -------------------------------------------------------- */
 
     .mobile-menu-toggle {
         width: 36px;
         height: 36px;
 
-        flex: 0 0 36px;
+        flex:
+            0
+            0
+            36px;
 
         padding: 0;
 
@@ -1078,130 +1082,87 @@ a {
 
 
     /* --------------------------------------------------------
-       Fullscreen Menu
-       Slides in from Left
+       Fullscreen Navigation Panel
+
+       Smooth opening and closing:
+       - slides from left
+       - subtle fade
+       - visibility hides only after close animation completes
     -------------------------------------------------------- */
 
-.header-actions {
-    position: fixed;
+    .header-actions {
+        position: fixed;
 
-    inset: 0;
+        inset: 0;
 
-    z-index: 2000;
+        z-index: 2000;
 
-    width: 100vw;
+        width: 100vw;
 
-    height: 100vh;
-    height: 100dvh;
+        height: 100vh;
+        height: 100dvh;
 
-    margin: 0;
-    padding: 0;
+        margin: 0;
+        padding: 0;
 
-    display: flex;
-    flex-direction: column;
+        display: flex;
 
-    align-items: stretch;
+        flex-direction: column;
 
-    overflow-x: hidden;
-    overflow-y: auto;
+        align-items: stretch;
 
-    overscroll-behavior: contain;
+        overflow-x: hidden;
+        overflow-y: auto;
 
-    background-color:
-        rgba(255, 255, 255, 0.94);
+        overscroll-behavior: contain;
 
-    -webkit-backdrop-filter:
-        blur(14px);
+        background-color:
+            rgba(255, 255, 255, 0.94);
 
-    backdrop-filter:
-        blur(14px);
+        -webkit-backdrop-filter:
+            blur(14px);
 
-    /*
-       Closed position
-    */
+        backdrop-filter:
+            blur(14px);
 
-    transform:
-        translate3d(-100%, 0, 0);
+        transform:
+            translate3d(-100%, 0, 0);
 
-    opacity: 0;
+        opacity: 0;
 
-    visibility: hidden;
+        visibility: hidden;
 
-    pointer-events: none;
+        pointer-events: none;
 
-    /*
-       Helps browser prepare the animation.
-    */
+        backface-visibility: hidden;
 
-    will-change:
-        transform,
-        opacity;
+        will-change:
+            transform,
+            opacity;
 
-    /*
-       Smooth closing animation.
+        transition:
+            transform
+            0.46s
+            cubic-bezier(0.65, 0, 0.35, 1),
 
-       Visibility changes only AFTER
-       slide/fade finishes.
-    */
+            opacity
+            0.34s
+            ease,
 
-    transition:
-        transform
-        0.45s
-        cubic-bezier(0.76, 0, 0.24, 1),
-
-        opacity
-        0.32s
-        ease,
-
-        visibility
-        0s
-        linear
-        0.45s;
-}
-
-
-/* ========================================================
-   OPEN FULLSCREEN MENU
-======================================================== */
-
-.header-actions.is-open {
-    transform:
-        translate3d(0, 0, 0);
-
-    opacity: 1;
-
-    visibility: visible;
-
-    pointer-events: auto;
-
-    /*
-       Visibility becomes active immediately,
-       then slide/fade animation begins.
-    */
-
-    transition:
-        transform
-        0.45s
-        cubic-bezier(0.22, 1, 0.36, 1),
-
-        opacity
-        0.32s
-        ease,
-
-        visibility
-        0s
-        linear
-        0s;
-}
+            visibility
+            0s
+            linear
+            0.46s;
+    }
 
 
     /* --------------------------------------------------------
-       Open Menu
+       Open Fullscreen Navigation Panel
     -------------------------------------------------------- */
 
     .header-actions.is-open {
         transform:
-            translateX(0);
+            translate3d(0, 0, 0);
 
         opacity: 1;
 
@@ -1211,11 +1172,11 @@ a {
 
         transition:
             transform
-            0.38s
+            0.46s
             cubic-bezier(0.22, 1, 0.36, 1),
 
             opacity
-            0.28s
+            0.34s
             ease,
 
             visibility
@@ -1243,7 +1204,10 @@ a {
         align-items: center;
         justify-content: space-between;
 
-        flex: 0 0 auto;
+        flex:
+            0
+            0
+            auto;
 
         border-bottom:
             1px solid
@@ -1252,7 +1216,7 @@ a {
 
 
     /* --------------------------------------------------------
-       Sidebar Logo
+       Fullscreen Menu Logo
     -------------------------------------------------------- */
 
     .mobile-menu-logo {
@@ -1274,7 +1238,7 @@ a {
 
     /* --------------------------------------------------------
        Close Button
-       Same 36px Size as Hamburger
+       Same Size as Hamburger
     -------------------------------------------------------- */
 
     .mobile-menu-close {
@@ -1283,7 +1247,10 @@ a {
         width: 36px;
         height: 36px;
 
-        flex: 0 0 36px;
+        flex:
+            0
+            0
+            36px;
 
         margin: 0;
         padding: 0;
@@ -1366,10 +1333,11 @@ a {
     -------------------------------------------------------- */
 
     .header-navigation {
-        width: calc(
-            100% -
-            (var(--container-padding) * 2)
-        );
+        width:
+            calc(
+                100% -
+                (var(--container-padding) * 2)
+            );
 
         max-width: 720px;
 
@@ -1591,7 +1559,9 @@ body.mobile-menu-open {
             (var(--container-padding) * 2)
         );
 
-    margin: 0 auto;
+    margin:
+        0
+        auto;
 
     padding:
         30px
@@ -1616,7 +1586,10 @@ body.mobile-menu-open {
 ============================================================ */
 
 .footer-copyright {
-    flex: 0 0 auto;
+    flex:
+        0
+        0
+        auto;
 
     margin: 0;
     padding: 0;
@@ -1698,7 +1671,8 @@ body.mobile-menu-open {
 
 
 /* ============================================================
-   FOOTER — 1024px and below
+   FOOTER
+   1024px and below
 ============================================================ */
 
 @media (max-width: 64rem) {
@@ -1740,7 +1714,8 @@ body.mobile-menu-open {
 
 
 /* ============================================================
-   FOOTER — TABLET
+   FOOTER TABLET
+   768px and below
 ============================================================ */
 
 @media (max-width: 48rem) {
@@ -1756,7 +1731,9 @@ body.mobile-menu-open {
     .footer-navigation {
         max-width: 600px;
 
-        margin: 0 auto;
+        margin:
+            0
+            auto;
 
         gap: 8px;
     }
@@ -1765,7 +1742,8 @@ body.mobile-menu-open {
 
 
 /* ============================================================
-   FOOTER — MOBILE
+   FOOTER MOBILE
+   640px and below
 ============================================================ */
 
 @media (max-width: 40rem) {
@@ -1790,7 +1768,8 @@ body.mobile-menu-open {
 
 
 /* ============================================================
-   FOOTER — COMPACT MOBILE
+   FOOTER COMPACT MOBILE
+   480px and below
 ============================================================ */
 
 @media (max-width: 30rem) {
@@ -1815,7 +1794,8 @@ body.mobile-menu-open {
 
 
 /* ============================================================
-   FOOTER — VERY SMALL MOBILE
+   FOOTER VERY SMALL MOBILE
+   360px and below
 ============================================================ */
 
 @media (max-width: 22.5rem) {
