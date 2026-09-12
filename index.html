@@ -34,6 +34,16 @@
 
 
     <!-- ========================================
+         International Telephone Input
+    ========================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/intl-tel-input@29.2.3/dist/css/intlTelInput.min.css"
+    >
+
+
+    <!-- ========================================
          Global CSS
     ========================================= -->
 
@@ -49,10 +59,11 @@
 
     <link
         rel="stylesheet"
-        href="css/home.css"
+        href="css/home.css?v=20260913-1"
     >
 
 </head>
+
 
 <body>
 
@@ -87,7 +98,6 @@
             <div class="hero-container">
 
 
-                <!-- Hero Badge -->
                 <div class="hero-badge">
 
                     <span
@@ -124,7 +134,6 @@
                 </div>
 
 
-                <!-- Hero Heading -->
                 <h1
                     class="hero-heading"
                     data-en="Building Chhattisgarh's Startup Ecosystem"
@@ -134,23 +143,25 @@
                 </h1>
 
 
-                <!-- Hero Description -->
                 <p
                     class="hero-description"
                     data-en="VikaasGarh helps people learn and enables people and organizations to create value. Its primary focus is helping aspiring founders and startup founders build, grow and scale startups."
                     data-hi=""
                 >
-                    VikaasGarh helps people learn and enables people and organizations to create value. Its primary focus is helping aspiring founders and startup founders build, grow and scale startups.
+                    VikaasGarh helps people learn and enables people and
+                    organizations to create value. Its primary focus is helping
+                    aspiring founders and startup founders build, grow and
+                    scale startups.
                 </p>
 
 
-                <!-- Hero Actions -->
                 <div class="hero-actions">
 
                     <a
                         href="/opportunities/"
                         class="btn btn--primary"
                     >
+
                         <span
                             data-en="Explore Opportunities"
                             data-hi=""
@@ -162,6 +173,7 @@
                             class="fa-solid fa-arrow-right"
                             aria-hidden="true"
                         ></i>
+
                     </a>
 
 
@@ -170,6 +182,7 @@
                         class="btn btn--secondary"
                         data-community-modal-open
                     >
+
                         <span
                             data-en="Join the Community"
                             data-hi=""
@@ -181,6 +194,7 @@
                             class="fa-solid fa-user-plus"
                             aria-hidden="true"
                         ></i>
+
                     </button>
 
                 </div>
@@ -202,8 +216,8 @@
             <div class="about-container">
 
 
-                <!-- About Content -->
                 <div class="about-content">
+
 
                     <div class="about-badge">
 
@@ -231,21 +245,19 @@
                     </h2>
 
 
-                    <!-- About Introduction -->
                     <p
                         class="about-description"
                         data-en="VikaasGarh is a sector-agnostic startup ecosystem-building initiative."
                         data-hi=""
                     >
-                        VikaasGarh is a sector-agnostic startup ecosystem-building initiative.
+                        VikaasGarh is a sector-agnostic startup
+                        ecosystem-building initiative.
                     </p>
 
 
-                    <!-- About Focus Points -->
                     <ul class="about-points">
 
 
-                        <!-- Business & Agency Support -->
                         <li class="about-point">
 
                             <span
@@ -259,13 +271,13 @@
                                 data-en="Supports business and agency owners in building, growing and scaling their businesses and agencies."
                                 data-hi=""
                             >
-                                Supports business and agency owners in building, growing and scaling their businesses and agencies.
+                                Supports business and agency owners in building,
+                                growing and scaling their businesses and agencies.
                             </span>
 
                         </li>
 
 
-                        <!-- Collaboration & Partnerships -->
                         <li class="about-point">
 
                             <span
@@ -279,13 +291,13 @@
                                 data-en="Enables collaboration and partnerships among startups, businesses and agencies for mutual growth."
                                 data-hi=""
                             >
-                                Enables collaboration and partnerships among startups, businesses and agencies for mutual growth.
+                                Enables collaboration and partnerships among
+                                startups, businesses and agencies for mutual growth.
                             </span>
 
                         </li>
 
 
-                        <!-- Talent Development -->
                         <li class="about-point">
 
                             <span
@@ -299,7 +311,8 @@
                                 data-en="Develops employable talent and enables employees to become intrapreneurs within their organizations."
                                 data-hi=""
                             >
-                                Develops employable talent and enables employees to become intrapreneurs within their organizations.
+                                Develops employable talent and enables employees
+                                to become intrapreneurs within their organizations.
                             </span>
 
                         </li>
@@ -307,21 +320,27 @@
                     </ul>
 
 
-                    <!-- About Ecosystem Role -->
                     <p
                         class="about-description about-description--ecosystem"
                         data-en="VikaasGarh strengthens Chhattisgarh’s startup ecosystem through programs, events, networks, resources and initiatives developed in-house or undertaken through collaborations and partnerships with regional, national and global organizations. Through this work, it connects stakeholders across Chhattisgarh and builds links between the state’s startup ecosystem and wider ecosystems in India and globally."
                         data-hi=""
                     >
-                        VikaasGarh strengthens Chhattisgarh’s startup ecosystem through programs, events, networks, resources and initiatives developed in-house or undertaken through collaborations and partnerships with regional, national and global organizations. Through this work, it connects stakeholders across Chhattisgarh and builds links between the state’s startup ecosystem and wider ecosystems in India and globally.
+                        VikaasGarh strengthens Chhattisgarh’s startup ecosystem
+                        through programs, events, networks, resources and
+                        initiatives developed in-house or undertaken through
+                        collaborations and partnerships with regional, national
+                        and global organizations. Through this work, it connects
+                        stakeholders across Chhattisgarh and builds links between
+                        the state’s startup ecosystem and wider ecosystems in
+                        India and globally.
                     </p>
 
 
-                    <!-- About CTA -->
                     <a
                         href="/about/"
                         class="btn btn--accent-dark about-cta"
                     >
+
                         <span
                             data-en="Learn More About VikaasGarh"
                             data-hi=""
@@ -333,10 +352,10 @@
                             class="fa-solid fa-arrow-right"
                             aria-hidden="true"
                         ></i>
+
                     </a>
 
 
-                    <!-- About Facts -->
                     <div class="about-info-row">
 
                         <div class="about-info">
@@ -433,21 +452,667 @@
 
 
     <!-- ========================================
-         Footer
+        Community Registration Modal
+    ======================================== -->
+
+    <div
+        class="community-modal"
+        id="community-modal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="community-modal-backdrop"
+            data-community-modal-close
+            aria-hidden="true"
+        ></div>
+
+
+        <div
+            class="community-modal-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="community-modal-title"
+        >
+
+            <!-- ========================================
+                Header
+            ========================================= -->
+
+            <div class="community-modal-header">
+
+                <h2
+                    class="community-modal-title"
+                    id="community-modal-title"
+                    data-en="Community Registration Form"
+                    data-hi=""
+                >
+                    Community Registration Form
+                </h2>
+
+
+                <button
+                    type="button"
+                    class="community-modal-close"
+                    data-community-modal-close
+                    aria-label="Close Community Registration Form"
+                >
+                    <i
+                        class="fa-solid fa-xmark"
+                        aria-hidden="true"
+                    ></i>
+                </button>
+
+            </div>
+
+
+            <!-- ========================================
+                Form
+            ========================================= -->
+
+            <form
+                class="community-form"
+                id="community-registration-form"
+                novalidate
+            >
+
+                <!-- Honeypot -->
+
+                <div
+                    class="community-form-honeypot"
+                    aria-hidden="true"
+                >
+                    <label for="community-website">
+                        Website
+                    </label>
+
+                    <input
+                        type="text"
+                        id="community-website"
+                        name="website"
+                        tabindex="-1"
+                        autocomplete="off"
+                    >
+                </div>
+
+
+                <!-- ========================================
+                    Full Name
+                ========================================= -->
+
+                <div class="community-form-group">
+
+                    <label
+                        class="community-form-label"
+                        for="community-full-name"
+                    >
+                        Full Name
+
+                        <span
+                            class="community-form-required"
+                            aria-hidden="true"
+                        >
+                            *
+                        </span>
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="community-full-name"
+                        name="fullName"
+                        class="community-form-input"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+
+                    <p
+                        class="community-form-error"
+                        data-error-for="community-full-name"
+                        aria-live="polite"
+                    ></p>
+
+                </div>
+
+
+                <!-- ========================================
+                    Phone Number
+                ========================================= -->
+
+                <div class="community-form-group">
+
+                    <label
+                        class="community-form-label"
+                        for="community-phone-number"
+                    >
+                        Phone Number
+
+                        <span
+                            class="community-form-required"
+                            aria-hidden="true"
+                        >
+                            *
+                        </span>
+                    </label>
+
+
+                    <div class="community-phone-field">
+
+                        <input
+                            type="tel"
+                            id="community-phone-number"
+                            name="phoneNumber"
+                            class="community-form-input community-phone-input"
+                            autocomplete="tel"
+                            inputmode="tel"
+                            required
+                        >
+
+                    </div>
+
+
+                    <p
+                        class="community-form-error"
+                        data-error-for="community-phone-number"
+                        aria-live="polite"
+                    ></p>
+
+                </div>
+
+
+                <!-- ========================================
+                    WhatsApp Question
+                ========================================= -->
+
+                <fieldset class="community-form-question">
+
+                    <legend class="community-form-label">
+
+                        Is this phone number available on WhatsApp?
+
+                        <span
+                            class="community-form-required"
+                            aria-hidden="true"
+                        >
+                            *
+                        </span>
+
+                    </legend>
+
+
+                    <div class="community-choice-group">
+
+                        <label class="community-choice-option">
+
+                            <input
+                                type="radio"
+                                id="community-whatsapp-yes"
+                                name="whatsappAvailability"
+                                value="yes"
+                            >
+
+                            <span>
+                                Yes
+                            </span>
+
+                        </label>
+
+
+                        <label class="community-choice-option">
+
+                            <input
+                                type="radio"
+                                id="community-whatsapp-no"
+                                name="whatsappAvailability"
+                                value="no"
+                            >
+
+                            <span>
+                                No
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <p
+                        class="community-form-error"
+                        data-error-for="community-whatsapp-availability"
+                        aria-live="polite"
+                    ></p>
+
+                </fieldset>
+
+
+                <!-- ========================================
+                    Separate WhatsApp Number
+                ========================================= -->
+
+                <div
+                    class="community-form-group"
+                    id="community-whatsapp-group"
+                    hidden
+                >
+
+                    <label
+                        class="community-form-label"
+                        for="community-whatsapp-number"
+                    >
+                        WhatsApp Number
+
+                        <span
+                            class="community-form-required"
+                            aria-hidden="true"
+                        >
+                            *
+                        </span>
+                    </label>
+
+
+                    <div class="community-phone-field">
+
+                        <input
+                            type="tel"
+                            id="community-whatsapp-number"
+                            name="whatsappNumber"
+                            class="community-form-input community-phone-input"
+                            autocomplete="tel"
+                            inputmode="tel"
+                        >
+
+                    </div>
+
+
+                    <p
+                        class="community-form-error"
+                        data-error-for="community-whatsapp-number"
+                        aria-live="polite"
+                    ></p>
+
+                </div>
+
+
+                <!-- ========================================
+                    Email
+                ========================================= -->
+
+                <div class="community-form-group">
+
+                    <label
+                        class="community-form-label"
+                        for="community-email"
+                    >
+                        Email Address
+
+                        <span
+                            class="community-form-required"
+                            aria-hidden="true"
+                        >
+                            *
+                        </span>
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="community-email"
+                        name="email"
+                        class="community-form-input"
+                        placeholder="Enter your email address"
+                        autocomplete="email"
+                        required
+                    >
+
+
+                    <p
+                        class="community-form-error"
+                        data-error-for="community-email"
+                        aria-live="polite"
+                    ></p>
+
+                </div>
+
+
+                <!-- ========================================
+                    Privacy + Terms Consent
+                ========================================= -->
+
+                <div class="community-form-checkbox-group">
+
+                    <label
+                        class="community-form-checkbox-label community-form-consent"
+                    >
+
+                        <input
+                            type="checkbox"
+                            id="community-policy-consent"
+                            name="policyConsent"
+                        >
+
+                        <span class="community-form-checkbox-custom"></span>
+
+
+                        <span>
+                            I have read and agree to the
+
+                            <a
+                                href="/privacy-policy/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Privacy Policy
+                            </a>
+
+                            and
+
+                            <a
+                                href="/terms-and-conditions/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Terms &amp; Conditions
+                            </a>.
+
+                            <span
+                                class="community-form-required"
+                                aria-hidden="true"
+                            >
+                                *
+                            </span>
+                        </span>
+
+                    </label>
+
+
+                    <p
+                        class="community-form-error"
+                        data-error-for="community-policy-consent"
+                        aria-live="polite"
+                    ></p>
+
+                </div>
+
+
+                <!-- ========================================
+                    Contact Consent
+                ========================================= -->
+
+                <div class="community-form-checkbox-group">
+
+                    <label
+                        class="community-form-checkbox-label community-form-consent"
+                    >
+
+                        <input
+                            type="checkbox"
+                            id="community-contact-consent"
+                            name="contactConsent"
+                        >
+
+                        <span class="community-form-checkbox-custom"></span>
+
+
+                        <span>
+                            By submitting this form, I consent to being contacted by
+                            VikaasGarh via phone, WhatsApp, and email.
+
+                            <span
+                                class="community-form-required"
+                                aria-hidden="true"
+                            >
+                                *
+                            </span>
+                        </span>
+
+                    </label>
+
+
+                    <p
+                        class="community-form-error"
+                        data-error-for="community-contact-consent"
+                        aria-live="polite"
+                    ></p>
+
+                </div>
+
+
+                <!-- ========================================
+                    Status
+                ========================================= -->
+
+                <p
+                    class="community-form-status"
+                    id="community-form-status"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+
+                <!-- ========================================
+                    Actions
+                ========================================= -->
+
+                <div class="community-form-actions">
+
+                    <button
+                        type="submit"
+                        class="btn btn--primary community-form-submit"
+                        disabled
+                    >
+                        <span>
+                            Join Community
+                        </span>
+
+                        <i
+                            class="fa-solid fa-arrow-right"
+                            aria-hidden="true"
+                        ></i>
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn btn--secondary"
+                        data-community-modal-close
+                    >
+                        Close
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================================
+        Success Modal
+    ======================================== -->
+
+    <div
+        class="community-success-modal"
+        id="community-success-modal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="community-modal-backdrop"
+            aria-hidden="true"
+        ></div>
+
+
+        <div
+            class="community-success-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="community-success-title"
+        >
+
+            <div class="community-success-icon">
+
+                <i
+                    class="fa-solid fa-check"
+                    aria-hidden="true"
+                ></i>
+
+            </div>
+
+
+            <h2
+                class="community-success-title"
+                id="community-success-title"
+            >
+                Registration Successful
+            </h2>
+
+
+            <p class="community-success-message">
+                Thank you! Your registration has been completed successfully.
+            </p>
+
+
+            <p class="community-success-description">
+                You are now a VikaasGarh Community member. You can continue
+                to your dashboard to complete your detailed profile.
+            </p>
+
+
+            <div class="community-success-actions">
+
+                <a
+                    href="/dashboard/"
+                    class="btn btn--primary"
+                >
+                    Continue to Dashboard
+
+                    <i
+                        class="fa-solid fa-arrow-right"
+                        aria-hidden="true"
+                    ></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================================
+        Discard Confirmation
+    ======================================== -->
+
+    <div
+        class="community-discard-modal"
+        id="community-discard-modal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="community-modal-backdrop"
+            data-community-discard-cancel
+            aria-hidden="true"
+        ></div>
+
+
+        <div
+            class="community-discard-dialog"
+            role="alertdialog"
+            aria-modal="true"
+            aria-labelledby="community-discard-title"
+            aria-describedby="community-discard-description"
+        >
+
+            <h2
+                class="community-discard-title"
+                id="community-discard-title"
+            >
+                Discard entered information?
+            </h2>
+
+
+            <p
+                class="community-discard-description"
+                id="community-discard-description"
+            >
+                Your entered information will be lost.
+            </p>
+
+
+            <div class="community-discard-actions">
+
+                <button
+                    type="button"
+                    class="btn btn--primary"
+                    id="community-continue-editing"
+                >
+                    Continue Editing
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn btn--secondary"
+                    id="community-discard-close"
+                >
+                    Discard &amp; Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================================
+        Footer
     ========================================= -->
 
     <div id="footer"></div>
 
 
     <!-- ========================================
-         Global JavaScript
+        Global JavaScript
     ========================================= -->
 
     <script src="js/global.js"></script>
 
 
     <!-- ========================================
-         Homepage JavaScript
+        Supabase JavaScript Library
+    ========================================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+
+    <!-- ========================================
+        VikaasGarh Supabase Client
+    ========================================= -->
+
+    <script src="js/supabase.js"></script>
+
+
+    <!-- ========================================
+        International Telephone Input
+    ========================================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/intl-tel-input@29.2.3/dist/js/intlTelInputWithUtils.min.js"
+    ></script>
+
+
+    <!-- ========================================
+        Homepage JavaScript
     ========================================= -->
 
     <script src="js/home.js"></script>

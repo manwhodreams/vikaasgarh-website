@@ -321,7 +321,7 @@
 
 
 /* ============================================================
-   ABOUT FOCUS POINTS
+   ABOUT POINTS
 ============================================================ */
 
 .about-points {
@@ -390,7 +390,7 @@
 
 
 /* ============================================================
-   ABOUT ECOSYSTEM DESCRIPTION
+   ABOUT ECOSYSTEM
 ============================================================ */
 
 .about-description--ecosystem {
@@ -424,11 +424,6 @@
 
     gap: 16px;
 }
-
-
-/* ============================================================
-   ABOUT FACT CARD
-============================================================ */
 
 .about-info {
     width: 100%;
@@ -510,11 +505,6 @@
     background-color: var(--color-white);
 }
 
-
-/* ============================================================
-   ABOUT PRESENCE BADGE
-============================================================ */
-
 .about-presence-badge {
     width: fit-content;
     max-width: 100%;
@@ -547,11 +537,6 @@
     font-size: 5px;
 }
 
-
-/* ============================================================
-   ABOUT PRESENCE HEADING
-============================================================ */
-
 .about-presence-heading {
     margin: 16px 0 0;
 
@@ -576,11 +561,6 @@
     text-wrap: balance;
 }
 
-
-/* ============================================================
-   ABOUT PRESENCE DIVIDER
-============================================================ */
-
 .about-presence-divider {
     width: 100%;
     height: 1px;
@@ -589,11 +569,6 @@
 
     background-color: var(--border-light);
 }
-
-
-/* ============================================================
-   ABOUT MAP
-============================================================ */
 
 .about-map {
     width: 100%;
@@ -627,8 +602,7 @@
 
 
 /* ============================================================
-   LAPTOP / SMALL DESKTOP
-   1024px AND BELOW
+   ABOUT — 1024px
 ============================================================ */
 
 @media (max-width: 64rem) {
@@ -659,14 +633,9 @@
 
 /* ============================================================
    TABLET
-   768px AND BELOW
 ============================================================ */
 
 @media (max-width: 48rem) {
-
-    /* ========================================
-       Hero
-    ======================================== */
 
     .hero-heading {
         max-width: 700px;
@@ -683,11 +652,6 @@
 
         font-size: 16px;
     }
-
-
-    /* ========================================
-       About
-    ======================================== */
 
     .about-container {
         gap: 40px;
@@ -714,14 +678,9 @@
 
 /* ============================================================
    MOBILE
-   640px AND BELOW
 ============================================================ */
 
 @media (max-width: 40rem) {
-
-    /* ========================================
-       Hero
-    ======================================== */
 
     .hero-section {
         background-size: 32px 32px;
@@ -776,11 +735,6 @@
 
         max-width: 360px;
     }
-
-
-    /* ========================================
-       About
-    ======================================== */
 
     .about-container {
         gap: 36px;
@@ -842,11 +796,6 @@
         margin-top: 26px;
     }
 
-
-    /* ========================================
-       About Facts
-    ======================================== */
-
     .about-info-row {
         max-width: 100%;
 
@@ -859,35 +808,14 @@
         padding: 24px;
     }
 
-
-    /* ========================================
-       About Presence
-    ======================================== */
-
     .about-presence-card {
         padding: 24px;
 
         border-radius: 24px;
     }
 
-    .about-presence-badge {
-        padding: 10px 16px;
-
-        gap: 8px;
-
-        font-size: 11px;
-
-        letter-spacing: 1.1px;
-    }
-
     .about-presence-heading {
         font-size: 32px;
-
-        line-height: 1.1;
-    }
-
-    .about-presence-divider {
-        margin-top: 20px;
     }
 
     .about-map {
@@ -901,27 +829,12 @@
 
 /* ============================================================
    COMPACT MOBILE
-   480px AND BELOW
 ============================================================ */
 
 @media (max-width: 30rem) {
 
-    /* ========================================
-       Hero
-    ======================================== */
-
     .hero-section {
         background-size: 28px 28px;
-    }
-
-    .hero-badge {
-        margin-bottom: 18px;
-
-        padding: 9px 14px;
-
-        font-size: 10px;
-
-        letter-spacing: 1px;
     }
 
     .hero-heading {
@@ -930,39 +843,14 @@
             10vw,
             42px
         );
-
-        line-height: 1.1;
-
-        letter-spacing: -1.2px;
     }
 
     .hero-description {
-        margin-top: 16px;
-
         font-size: 15px;
     }
 
-    .hero-actions {
-        margin-top: 22px;
-    }
-
-
-    /* ========================================
-       About
-    ======================================== */
-
     .about-container {
         gap: 32px;
-    }
-
-    .about-badge {
-        margin-bottom: 18px;
-
-        padding: 9px 14px;
-
-        font-size: 10px;
-
-        letter-spacing: 1px;
     }
 
     .about-heading {
@@ -974,67 +862,17 @@
     }
 
     .about-description {
-        margin-top: 16px;
-
         font-size: 15px;
     }
-
-    .about-points {
-        margin-top: 18px;
-    }
-
-    .about-point {
-        font-size: 15px;
-    }
-
-    .about-point-icon {
-        margin-top: 4px;
-    }
-
-    .about-description--ecosystem {
-        margin-top: 18px;
-    }
-
-    .about-cta {
-        margin-top: 24px;
-    }
-
-
-    /* ========================================
-       About Facts
-    ======================================== */
 
     .about-info-row {
         margin-top: 28px;
     }
 
-    .about-info {
-        padding: 22px;
-
-        border-radius: 18px;
-    }
-
-    .about-info strong {
-        font-size: 25px;
-    }
-
-
-    /* ========================================
-       About Presence
-    ======================================== */
-
     .about-presence-card {
         padding: 20px;
 
         border-radius: 20px;
-    }
-
-    .about-presence-badge {
-        padding: 9px 14px;
-
-        font-size: 10px;
-
-        letter-spacing: 1px;
     }
 
     .about-presence-heading {
@@ -1043,8 +881,6 @@
 
     .about-map {
         min-height: 235px;
-
-        padding-top: 16px;
     }
 
 }
@@ -1052,7 +888,6 @@
 
 /* ============================================================
    VERY SMALL MOBILE
-   360px AND BELOW
 ============================================================ */
 
 @media (max-width: 22.5rem) {
@@ -1061,34 +896,12 @@
         font-size: 34px;
     }
 
-    .hero-description {
-        font-size: 15px;
-    }
-
-    .hero-badge,
-    .about-badge,
-    .about-presence-badge {
-        padding: 9px 12px;
-
-        font-size: 9px;
-
-        letter-spacing: 0.9px;
-    }
-
     .about-heading {
         font-size: 31px;
     }
 
-    .about-presence-card {
-        padding: 18px;
-    }
-
     .about-presence-heading {
         font-size: 27px;
-    }
-
-    .about-map {
-        min-height: 215px;
     }
 
 }
@@ -1096,64 +909,1019 @@
 
 /* ============================================================
    SHORT LAPTOP VIEWPORT
-   Keeps CTA/content higher on laptop screens
 ============================================================ */
 
 @media (min-width: 64.0625rem) and (max-height: 900px) {
-
-    /* ========================================
-       Hero
-    ======================================== */
 
     .hero-section {
         padding-top: 72px;
         padding-bottom: 72px;
     }
 
-    .hero-badge {
-        margin-bottom: 20px;
-    }
-
-    .hero-description {
-        margin-top: 18px;
-    }
-
-    .hero-actions {
-        margin-top: 24px;
-    }
-
-
-    /* ========================================
-       About
-    ======================================== */
-
     .about-section {
         padding-top: 80px;
         padding-bottom: 80px;
     }
 
-    .about-badge {
-        margin-bottom: 20px;
+}
+
+
+/* ============================================================
+   COMMUNITY MODALS
+============================================================ */
+
+.community-modal,
+.community-success-modal,
+.community-discard-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 4000;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 16px;
+
+    display: grid;
+    place-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+        opacity 0.22s ease,
+        visibility 0s linear 0.22s;
+}
+
+.community-modal.is-open,
+.community-success-modal.is-open,
+.community-discard-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transition:
+        opacity 0.22s ease,
+        visibility 0s linear 0s;
+}
+
+
+/* ============================================================
+   BACKDROP
+============================================================ */
+
+.community-modal-backdrop {
+    position: absolute;
+    inset: 0;
+
+    background-color:
+        rgba(0, 12, 64, 0.55);
+
+    -webkit-backdrop-filter:
+        blur(5px);
+
+    backdrop-filter:
+        blur(5px);
+
+    cursor: default;
+}
+
+
+/* ============================================================
+   REGISTRATION DIALOG
+============================================================ */
+
+.community-modal-dialog {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 550px;
+
+    max-height:
+        calc(100dvh - 32px);
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    overscroll-behavior: contain;
+
+    border:
+        1px solid
+        var(--border-light);
+
+    border-radius: 20px;
+
+    background-color:
+        var(--color-white);
+
+    box-shadow:
+        0 28px 70px
+        rgba(0, 12, 64, 0.22);
+
+    transform:
+        translateY(14px)
+        scale(0.99);
+
+    transition:
+        transform
+        0.3s
+        cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.community-modal.is-open
+.community-modal-dialog {
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.community-modal-header {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+
+    min-height: 58px;
+
+    padding:
+        10px
+        18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    border-bottom:
+        1px solid
+        var(--border-light);
+
+    background-color:
+        rgba(255, 255, 255, 0.98);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+.community-modal-title {
+    margin: 0;
+
+    font-family:
+        var(--font-heading);
+
+    color:
+        var(--color-navy);
+
+    font-size: 22px;
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    letter-spacing: -0.4px;
+}
+
+
+/* ============================================================
+   CLOSE
+============================================================ */
+
+.community-modal-close {
+    width: 34px;
+    height: 34px;
+
+    flex: 0 0 34px;
+
+    padding: 0;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        var(--border-light-strong);
+
+    border-radius: 8px;
+
+    background:
+        var(--color-white);
+
+    color:
+        var(--color-navy);
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast);
+}
+
+.community-modal-close:hover {
+    border-color:
+        var(--color-navy);
+
+    background-color:
+        var(--color-navy);
+
+    color:
+        var(--color-white);
+}
+
+
+/* ============================================================
+   FORM
+============================================================ */
+
+.community-form {
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        16px
+        18px
+        18px;
+
+    display: grid;
+
+    gap: 13px;
+}
+
+
+/* ============================================================
+   FORM GROUP
+============================================================ */
+
+.community-form-group {
+    width: 100%;
+
+    display: grid;
+
+    gap: 6px;
+}
+
+.community-form-group[hidden] {
+    display: none !important;
+}
+
+
+/* ============================================================
+   LABEL
+============================================================ */
+
+.community-form-label {
+    color:
+        var(--color-navy);
+
+    font-size: 12.5px;
+    line-height: 1.4;
+
+    font-weight: 700;
+}
+
+.community-form-required {
+    color: #c62828;
+}
+
+
+/* ============================================================
+   INPUTS
+============================================================ */
+
+.community-form-input {
+    width: 100%;
+
+    height: 43px;
+
+    padding:
+        0
+        13px;
+
+    border:
+        1px solid
+        var(--border-light-strong);
+
+    border-radius: 9px;
+
+    background-color:
+        var(--color-white);
+
+    color:
+        var(--color-navy);
+
+    font-family:
+        var(--font-primary);
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.community-form-input::placeholder {
+    color:
+        rgba(0, 12, 64, 0.42);
+}
+
+.community-form-input:focus {
+    border-color:
+        var(--color-navy);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(0, 12, 64, 0.07);
+}
+
+.community-form-input[aria-invalid="true"] {
+    border-color: #c62828;
+}
+
+
+/* ============================================================
+   INTERNATIONAL PHONE INPUT
+============================================================ */
+
+.community-phone-field {
+    width: 100%;
+}
+
+.community-phone-field .iti {
+    width: 100%;
+}
+
+.community-phone-field
+.community-phone-input {
+    width: 100%;
+}
+
+
+/*
+   This is important.
+
+   The dropdown is attached to body so that
+   the modal's overflow cannot clip it.
+*/
+
+.vg-iti-dropdown-layer {
+    z-index: 10000 !important;
+}
+
+.vg-iti-country-selector {
+    z-index: 10000 !important;
+}
+
+
+/*
+   Fallback for generated intl-tel-input
+   dropdown containers.
+*/
+
+.iti__country-selector {
+    z-index: 10000 !important;
+}
+
+.iti__country-selector-container {
+    z-index: 10000 !important;
+}
+
+.iti__dropdown-content {
+    z-index: 10000 !important;
+
+    border:
+        1px solid
+        var(--border-light-strong) !important;
+
+    border-radius:
+        10px !important;
+
+    background:
+        var(--color-white) !important;
+
+    box-shadow:
+        0 18px 45px
+        rgba(0, 12, 64, 0.18) !important;
+}
+
+.iti__selected-country {
+    cursor: pointer;
+}
+
+.iti__selected-dial-code {
+    color:
+        var(--color-navy);
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   WHATSAPP YES / NO
+============================================================ */
+
+.community-form-question {
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+
+    display: grid;
+
+    gap: 8px;
+}
+
+
+/*
+   Fixed two-column layout guarantees
+   visible space between Yes and No.
+*/
+
+.community-choice-group {
+    display: grid;
+
+    grid-template-columns:
+        84px
+        84px;
+
+    column-gap: 14px;
+
+    align-items: center;
+}
+
+.community-choice-option {
+    position: relative;
+
+    width: 84px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        var(--border-light-strong);
+
+    border-radius: 9px;
+
+    background-color:
+        var(--color-white);
+
+    color:
+        var(--color-navy);
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast);
+}
+
+.community-choice-option:hover {
+    border-color:
+        var(--color-navy);
+}
+
+.community-choice-option input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.community-choice-option span {
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.community-choice-option:has(input:checked) {
+    border-color:
+        var(--color-navy);
+
+    background-color:
+        var(--color-navy);
+
+    color:
+        var(--color-white);
+}
+
+.community-choice-option:has(input:focus-visible) {
+    outline:
+        2px solid
+        var(--color-gold);
+
+    outline-offset: 2px;
+}
+
+.community-form-question > .community-form-label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+
+/* ============================================================
+   CHECKBOX
+============================================================ */
+
+.community-form-checkbox-group {
+    width: 100%;
+}
+
+.community-form-checkbox-label {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    color:
+        rgba(0, 12, 64, 0.82);
+
+    font-size: 11.5px;
+    line-height: 1.45;
+
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.community-form-checkbox-label input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.community-form-checkbox-custom {
+    position: relative;
+
+    width: 18px;
+    height: 18px;
+
+    flex: 0 0 18px;
+
+    margin-top: 1px;
+
+    border:
+        1px solid
+        var(--border-light-strong);
+
+    border-radius: 4px;
+
+    background-color:
+        var(--color-white);
+}
+
+.community-form-checkbox-label
+input:checked
++
+.community-form-checkbox-custom {
+    border-color:
+        var(--color-navy);
+
+    background-color:
+        var(--color-navy);
+}
+
+.community-form-checkbox-custom::after {
+    content: "";
+
+    position: absolute;
+
+    left: 5px;
+    top: 2px;
+
+    width: 5px;
+    height: 9px;
+
+    border:
+        solid
+        var(--color-white);
+
+    border-width:
+        0
+        2px
+        2px
+        0;
+
+    opacity: 0;
+
+    transform:
+        rotate(45deg);
+}
+
+.community-form-checkbox-label
+input:checked
++
+.community-form-checkbox-custom::after {
+    opacity: 1;
+}
+
+.community-form-consent a {
+    color:
+        var(--color-navy);
+
+    font-weight: 700;
+
+    text-decoration: underline;
+
+    text-underline-offset: 2px;
+}
+
+
+/* ============================================================
+   ERRORS
+============================================================ */
+
+.community-form-error {
+    margin: 0;
+
+    color: #c62828;
+
+    font-size: 11px;
+    line-height: 1.35;
+
+    font-weight: 500;
+}
+
+.community-form-error:empty {
+    display: none;
+}
+
+
+/* ============================================================
+   STATUS
+============================================================ */
+
+.community-form-status {
+    margin: 0;
+
+    color: #c62828;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    font-weight: 600;
+}
+
+.community-form-status:empty {
+    display: none;
+}
+
+
+/* ============================================================
+   ACTION BUTTONS
+============================================================ */
+
+.community-form-actions {
+    width: 100%;
+
+    margin-top: 2px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 10px;
+}
+
+.community-form-actions .btn {
+    min-height: 42px;
+
+    padding:
+        0
+        19px;
+}
+
+
+/* ============================================================
+   DISABLED JOIN BUTTON
+============================================================ */
+
+.community-form-submit:disabled {
+    border-color:
+        rgba(0, 12, 64, 0.12);
+
+    background-color:
+        rgba(0, 12, 64, 0.08);
+
+    color:
+        rgba(0, 12, 64, 0.38);
+
+    cursor: not-allowed;
+
+    opacity: 1;
+
+    pointer-events: none;
+}
+
+
+/* ============================================================
+   HONEYPOT
+============================================================ */
+
+.community-form-honeypot {
+    position: absolute !important;
+
+    left: -9999px !important;
+
+    width: 1px !important;
+    height: 1px !important;
+
+    overflow: hidden !important;
+}
+
+
+/* ============================================================
+   SUCCESS + DISCARD DIALOGS
+============================================================ */
+
+.community-success-dialog,
+.community-discard-dialog {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+
+    padding: 28px;
+
+    border:
+        1px solid
+        var(--border-light);
+
+    border-radius: 20px;
+
+    background:
+        var(--color-white);
+
+    box-shadow:
+        0 28px 70px
+        rgba(0, 12, 64, 0.22);
+
+    text-align: center;
+}
+
+.community-success-dialog {
+    max-width: 500px;
+}
+
+.community-discard-dialog {
+    max-width: 450px;
+}
+
+.community-success-icon {
+    width: 54px;
+    height: 54px;
+
+    margin:
+        0
+        auto
+        18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        var(--color-gold);
+
+    color:
+        var(--color-navy);
+
+    font-size: 21px;
+}
+
+.community-success-title,
+.community-discard-title {
+    margin: 0;
+
+    font-family:
+        var(--font-heading);
+
+    color:
+        var(--color-navy);
+
+    font-size: 28px;
+    line-height: 1.15;
+}
+
+.community-success-message {
+    margin:
+        16px
+        0
+        0;
+
+    color:
+        var(--color-navy);
+
+    font-size: 15px;
+    line-height: 1.55;
+
+    font-weight: 600;
+}
+
+.community-success-description,
+.community-discard-description {
+    margin:
+        10px
+        0
+        0;
+
+    color:
+        var(--color-text-secondary);
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.community-success-actions,
+.community-discard-actions {
+    margin-top: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+
+/* ============================================================
+   BODY LOCK
+============================================================ */
+
+body.community-modal-open {
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   SHORT LAPTOP
+============================================================ */
+
+@media (min-width: 48.0625rem) and (max-height: 820px) {
+
+    .community-modal {
+        padding: 10px;
     }
 
-    .about-description {
-        margin-top: 18px;
+    .community-modal-dialog {
+        max-width: 535px;
+
+        max-height:
+            calc(100dvh - 20px);
     }
 
-    .about-points {
-        margin-top: 20px;
+    .community-modal-header {
+        min-height: 52px;
+
+        padding:
+            9px
+            16px;
     }
 
-    .about-description--ecosystem {
-        margin-top: 20px;
+    .community-modal-title {
+        font-size: 20px;
     }
 
-    .about-cta {
-        margin-top: 26px;
+    .community-form {
+        padding:
+            12px
+            16px
+            14px;
+
+        gap: 10px;
     }
 
-    .about-info-row {
-        margin-top: 32px;
+    .community-form-input {
+        height: 39px;
+    }
+
+    .community-choice-option {
+        height: 35px;
+    }
+
+    .community-form-checkbox-label {
+        font-size: 11px;
+    }
+
+    .community-form-actions .btn {
+        min-height: 39px;
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 40rem) {
+
+    .community-modal,
+    .community-success-modal,
+    .community-discard-modal {
+        padding: 10px;
+    }
+
+    .community-modal-dialog {
+        max-height:
+            calc(100dvh - 20px);
+
+        border-radius: 17px;
+    }
+
+    .community-modal-header {
+        min-height: 56px;
+
+        padding:
+            10px
+            14px;
+    }
+
+    .community-modal-title {
+        font-size: 20px;
+    }
+
+    .community-form {
+        padding:
+            14px;
+
+        gap: 12px;
+    }
+
+    .community-success-dialog,
+    .community-discard-dialog {
+        padding: 24px 18px;
+    }
+
+}
+
+
+/* ============================================================
+   COMPACT MOBILE
+============================================================ */
+
+@media (max-width: 30rem) {
+
+    .community-choice-group {
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 12px;
+    }
+
+    .community-choice-option {
+        width: 100%;
+    }
+
+    .community-form-actions,
+    .community-discard-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .community-form-actions .btn,
+    .community-discard-actions .btn,
+    .community-success-actions .btn {
+        width: 100%;
     }
 
 }
