@@ -1341,30 +1341,20 @@
    the modal's overflow cannot clip it.
 */
 
-.vg-iti-dropdown-layer {
-    z-index: 10000 !important;
-}
-
-.vg-iti-country-selector {
-    z-index: 10000 !important;
-}
-
-
 /*
-   Fallback for generated intl-tel-input
-   dropdown containers.
+   Country selector is attached to body.
+
+   It must sit above the Community Registration
+   modal, which uses z-index: 4000.
 */
 
+.iti--detached-country-selector {
+    z-index: 10000 !important;
+}
+
+
 .iti__country-selector {
-    z-index: 10000 !important;
-}
-
-.iti__country-selector-container {
-    z-index: 10000 !important;
-}
-
-.iti__dropdown-content {
-    z-index: 10000 !important;
+    z-index: 10001 !important;
 
     border:
         1px solid
