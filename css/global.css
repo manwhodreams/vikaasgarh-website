@@ -1814,14 +1814,11 @@ body.mobile-menu-open {
 .error-page {
     width: 100%;
 
-    min-height: clamp(
-        480px,
-        62vh,
-        680px
-    );
+    min-height:
+        calc(100svh - 204px);
 
     padding:
-        var(--section-padding)
+        clamp(40px, 6vh, 64px)
         0;
 
     display: flex;
@@ -1856,7 +1853,7 @@ body.mobile-menu-open {
 .error-page-container {
     width: 100%;
 
-    max-width: 760px;
+    max-width: 720px;
 
     margin:
         0
@@ -1885,17 +1882,43 @@ body.mobile-menu-open {
     color:
         var(--color-navy);
 
-    font-size: clamp(
-        110px,
-        10rem + 4vw,
-        190px
-    );
+    font-size:
+        clamp(
+            92px,
+            9vw,
+            138px
+        );
 
-    line-height: 0.82;
+    line-height: 0.85;
 
     font-weight: 700;
 
-    letter-spacing: -6px;
+    letter-spacing: -4px;
+}
+
+
+/* ============================================================
+   ERROR ACCENT
+============================================================ */
+
+.error-page-code::after {
+    content: "";
+
+    width: 52px;
+    height: 3px;
+
+    margin:
+        24px
+        auto
+        0;
+
+    display: block;
+
+    border-radius:
+        var(--radius-pill);
+
+    background-color:
+        var(--color-gold);
 }
 
 
@@ -1905,7 +1928,7 @@ body.mobile-menu-open {
 
 .error-page-heading {
     margin:
-        32px
+        24px
         0
         0;
 
@@ -1915,17 +1938,18 @@ body.mobile-menu-open {
     color:
         var(--color-navy);
 
-    font-size: clamp(
-        36px,
-        2rem + 1.4vw,
-        52px
-    );
+    font-size:
+        clamp(
+            30px,
+            2rem + 0.8vw,
+            40px
+        );
 
     line-height: 1.08;
 
     font-weight: 700;
 
-    letter-spacing: -1.4px;
+    letter-spacing: -1px;
 
     text-wrap: balance;
 }
@@ -1938,23 +1962,18 @@ body.mobile-menu-open {
 .error-page-description {
     width: 100%;
 
-    max-width: 600px;
+    max-width: 540px;
 
     margin:
-        18px
+        14px
         auto
         0;
 
     color:
         var(--color-text-secondary);
 
-    font-size: clamp(
-        15px,
-        0.95rem + 0.15vw,
-        17px
-    );
-
-    line-height: 1.7;
+    font-size: 16px;
+    line-height: 1.65;
 
     font-weight: 400;
 
@@ -1967,51 +1986,79 @@ body.mobile-menu-open {
 ============================================================ */
 
 .error-page-cta {
-    margin-top: 28px;
+    margin-top: 26px;
 }
 
 
 /* ============================================================
-   ERROR PAGE — TABLET
+   ERROR PAGE
+   1024px AND BELOW
+============================================================ */
+
+@media (max-width: 64rem) {
+
+    .error-page {
+        min-height:
+            calc(100svh - 72px);
+
+        padding:
+            52px
+            0;
+    }
+
+}
+
+
+/* ============================================================
+   TABLET
 ============================================================ */
 
 @media (max-width: 48rem) {
 
     .error-page {
-        min-height: 520px;
+        padding:
+            64px
+            0;
+    }
+
+    .error-page-container {
+        max-width: 640px;
     }
 
     .error-page-code {
-        font-size: clamp(
-            100px,
-            20vw,
-            150px
-        );
-
-        letter-spacing: -4px;
+        font-size:
+            clamp(
+                88px,
+                17vw,
+                120px
+            );
     }
 
     .error-page-heading {
-        margin-top: 28px;
-
-        font-size: clamp(
-            34px,
-            6vw,
-            44px
-        );
+        font-size:
+            clamp(
+                30px,
+                6vw,
+                38px
+            );
     }
 
 }
 
 
 /* ============================================================
-   ERROR PAGE — MOBILE
+   MOBILE
 ============================================================ */
 
 @media (max-width: 40rem) {
 
     .error-page {
-        min-height: 480px;
+        min-height:
+            calc(100svh - 66px);
+
+        padding:
+            56px
+            0;
 
         background-size:
             32px
@@ -2019,52 +2066,62 @@ body.mobile-menu-open {
     }
 
     .error-page-code {
-        font-size: clamp(
-            92px,
-            27vw,
-            125px
-        );
+        font-size:
+            clamp(
+                78px,
+                24vw,
+                102px
+            );
 
         letter-spacing: -3px;
     }
 
+    .error-page-code::after {
+        width: 46px;
+
+        margin-top: 20px;
+    }
+
     .error-page-heading {
-        margin-top: 26px;
+        margin-top: 20px;
 
-        font-size: clamp(
-            32px,
-            8vw,
-            40px
-        );
-
-        letter-spacing: -1px;
+        font-size:
+            clamp(
+                28px,
+                7vw,
+                34px
+            );
     }
 
     .error-page-description {
-        max-width: 480px;
+        max-width: 460px;
 
-        margin-top: 16px;
+        margin-top: 12px;
 
-        font-size: 16px;
-
+        font-size: 15px;
         line-height: 1.65;
     }
 
     .error-page-cta {
-        margin-top: 26px;
+        margin-top: 22px;
     }
 
 }
 
 
 /* ============================================================
-   ERROR PAGE — COMPACT MOBILE
+   COMPACT MOBILE
 ============================================================ */
 
 @media (max-width: 30rem) {
 
     .error-page {
-        min-height: 440px;
+        min-height:
+            calc(100svh - 64px);
+
+        padding:
+            48px
+            0;
 
         background-size:
             28px
@@ -2072,42 +2129,433 @@ body.mobile-menu-open {
     }
 
     .error-page-code {
-        font-size: clamp(
-            84px,
-            26vw,
-            110px
-        );
-
-        letter-spacing: -2.5px;
+        font-size:
+            clamp(
+                72px,
+                23vw,
+                92px
+            );
     }
 
     .error-page-heading {
-        font-size: clamp(
-            30px,
-            8vw,
-            36px
-        );
+        font-size:
+            clamp(
+                26px,
+                7vw,
+                31px
+            );
     }
 
     .error-page-description {
-        font-size: 15px;
+        max-width: 360px;
+
+        font-size: 14px;
+    }
+
+    .error-page-cta {
+        width: 100%;
+
+        max-width: 260px;
     }
 
 }
 
 
 /* ============================================================
-   ERROR PAGE — VERY SMALL MOBILE
+   VERY SMALL MOBILE
 ============================================================ */
 
 @media (max-width: 22.5rem) {
 
     .error-page-code {
-        font-size: 82px;
+        font-size: 70px;
     }
 
     .error-page-heading {
-        font-size: 29px;
+        font-size: 26px;
+    }
+
+}
+
+
+/* ============================================================
+   SHORT LAPTOP VIEWPORT
+============================================================ */
+
+@media (min-width: 64.0625rem) and (max-height: 850px) {
+
+    .error-page {
+        min-height:
+            calc(100svh - 204px);
+
+        padding:
+            30px
+            0;
+    }
+
+    .error-page-code {
+        font-size:
+            clamp(
+                82px,
+                8vw,
+                108px
+            );
+    }
+
+    .error-page-code::after {
+        margin-top: 18px;
+    }
+
+    .error-page-heading {
+        margin-top: 18px;
+
+        font-size: 34px;
+    }
+
+    .error-page-description {
+        margin-top: 10px;
+
+        font-size: 15px;
+    }
+
+    .error-page-cta {
+        margin-top: 20px;
+    }
+
+}
+
+
+/* ============================================================
+   UNDER CONSTRUCTION PAGE
+============================================================ */
+
+.construction-page {
+    width: 100%;
+
+    min-height:
+        calc(100svh - 204px);
+
+    padding:
+        clamp(40px, 6vh, 64px)
+        0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color:
+        var(--color-white);
+
+    background-image:
+        linear-gradient(
+            rgba(74, 211, 255, 0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(74, 211, 255, 0.08) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        40px
+        40px;
+}
+
+
+/* ============================================================
+   CONTAINER
+============================================================ */
+
+.construction-page-container {
+    width: 100%;
+
+    max-width: 720px;
+
+    margin:
+        0
+        auto;
+
+    padding-left:
+        var(--container-padding);
+
+    padding-right:
+        var(--container-padding);
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   HEADING
+============================================================ */
+
+.construction-page-heading {
+    margin: 0;
+
+    font-family:
+        var(--font-heading);
+
+    color:
+        var(--color-navy);
+
+    font-size:
+        clamp(
+            30px,
+            2rem + 0.8vw,
+            40px
+        );
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+    text-wrap: balance;
+}
+
+
+/* ============================================================
+   ACCENT
+============================================================ */
+
+.construction-page-accent {
+    width: 52px;
+    height: 3px;
+
+    margin:
+        24px
+        auto
+        0;
+
+    border-radius:
+        var(--radius-pill);
+
+    background-color:
+        var(--color-gold);
+}
+
+
+/* ============================================================
+   DESCRIPTION
+============================================================ */
+
+.construction-page-description {
+    width: 100%;
+
+    max-width: 540px;
+
+    margin:
+        18px
+        auto
+        0;
+
+    color:
+        var(--color-text-secondary);
+
+    font-size: 16px;
+    line-height: 1.65;
+
+    font-weight: 400;
+
+    text-wrap: pretty;
+}
+
+
+/* ============================================================
+   CTA
+============================================================ */
+
+.construction-page-cta {
+    margin-top: 26px;
+}
+
+
+/* ============================================================
+   1024px AND BELOW
+============================================================ */
+
+@media (max-width: 64rem) {
+
+    .construction-page {
+        min-height:
+            calc(100svh - 72px);
+
+        padding:
+            52px
+            0;
+    }
+
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 48rem) {
+
+    .construction-page {
+        padding:
+            64px
+            0;
+    }
+
+    .construction-page-container {
+        max-width: 640px;
+    }
+
+    .construction-page-heading {
+        font-size:
+            clamp(
+                30px,
+                6vw,
+                38px
+            );
+    }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 40rem) {
+
+    .construction-page {
+        min-height:
+            calc(100svh - 66px);
+
+        padding:
+            56px
+            0;
+
+        background-size:
+            32px
+            32px;
+    }
+
+    .construction-page-heading {
+        font-size:
+            clamp(
+                28px,
+                7vw,
+                34px
+            );
+    }
+
+    .construction-page-accent {
+        width: 46px;
+
+        margin-top: 20px;
+    }
+
+    .construction-page-description {
+        max-width: 460px;
+
+        margin-top: 16px;
+
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .construction-page-cta {
+        margin-top: 22px;
+    }
+
+}
+
+
+/* ============================================================
+   COMPACT MOBILE
+============================================================ */
+
+@media (max-width: 30rem) {
+
+    .construction-page {
+        min-height:
+            calc(100svh - 64px);
+
+        padding:
+            48px
+            0;
+
+        background-size:
+            28px
+            28px;
+    }
+
+    .construction-page-heading {
+        font-size:
+            clamp(
+                26px,
+                7vw,
+                31px
+            );
+    }
+
+    .construction-page-description {
+        max-width: 360px;
+
+        font-size: 14px;
+    }
+
+    .construction-page-cta {
+        width: 100%;
+
+        max-width: 260px;
+    }
+
+}
+
+
+/* ============================================================
+   VERY SMALL MOBILE
+============================================================ */
+
+@media (max-width: 22.5rem) {
+
+    .construction-page-heading {
+        font-size: 26px;
+    }
+
+}
+
+
+/* ============================================================
+   SHORT LAPTOP VIEWPORT
+============================================================ */
+
+@media (min-width: 64.0625rem) and (max-height: 850px) {
+
+    .construction-page {
+        min-height:
+            calc(100svh - 204px);
+
+        padding:
+            30px
+            0;
+    }
+
+    .construction-page-heading {
+        font-size: 34px;
+    }
+
+    .construction-page-accent {
+        margin-top: 18px;
+    }
+
+    .construction-page-description {
+        margin-top: 14px;
+
+        font-size: 15px;
+    }
+
+    .construction-page-cta {
+        margin-top: 20px;
     }
 
 }
