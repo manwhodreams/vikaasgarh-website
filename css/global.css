@@ -1805,3 +1805,309 @@ body.mobile-menu-open {
     }
 
 }
+
+
+/* ============================================================
+   ERROR & STATUS PAGES
+============================================================ */
+
+.error-page {
+    width: 100%;
+
+    min-height: clamp(
+        480px,
+        62vh,
+        680px
+    );
+
+    padding:
+        var(--section-padding)
+        0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color:
+        var(--color-white);
+
+    background-image:
+        linear-gradient(
+            rgba(74, 211, 255, 0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(74, 211, 255, 0.08) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        40px
+        40px;
+}
+
+
+/* ============================================================
+   ERROR PAGE CONTAINER
+============================================================ */
+
+.error-page-container {
+    width: 100%;
+
+    max-width: 760px;
+
+    margin:
+        0
+        auto;
+
+    padding-left:
+        var(--container-padding);
+
+    padding-right:
+        var(--container-padding);
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   ERROR CODE
+============================================================ */
+
+.error-page-code {
+    margin: 0;
+
+    font-family:
+        var(--font-heading);
+
+    color:
+        var(--color-navy);
+
+    font-size: clamp(
+        110px,
+        10rem + 4vw,
+        190px
+    );
+
+    line-height: 0.82;
+
+    font-weight: 700;
+
+    letter-spacing: -6px;
+}
+
+
+/* ============================================================
+   ERROR HEADING
+============================================================ */
+
+.error-page-heading {
+    margin:
+        32px
+        0
+        0;
+
+    font-family:
+        var(--font-heading);
+
+    color:
+        var(--color-navy);
+
+    font-size: clamp(
+        36px,
+        2rem + 1.4vw,
+        52px
+    );
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    letter-spacing: -1.4px;
+
+    text-wrap: balance;
+}
+
+
+/* ============================================================
+   ERROR DESCRIPTION
+============================================================ */
+
+.error-page-description {
+    width: 100%;
+
+    max-width: 600px;
+
+    margin:
+        18px
+        auto
+        0;
+
+    color:
+        var(--color-text-secondary);
+
+    font-size: clamp(
+        15px,
+        0.95rem + 0.15vw,
+        17px
+    );
+
+    line-height: 1.7;
+
+    font-weight: 400;
+
+    text-wrap: pretty;
+}
+
+
+/* ============================================================
+   ERROR CTA
+============================================================ */
+
+.error-page-cta {
+    margin-top: 28px;
+}
+
+
+/* ============================================================
+   ERROR PAGE — TABLET
+============================================================ */
+
+@media (max-width: 48rem) {
+
+    .error-page {
+        min-height: 520px;
+    }
+
+    .error-page-code {
+        font-size: clamp(
+            100px,
+            20vw,
+            150px
+        );
+
+        letter-spacing: -4px;
+    }
+
+    .error-page-heading {
+        margin-top: 28px;
+
+        font-size: clamp(
+            34px,
+            6vw,
+            44px
+        );
+    }
+
+}
+
+
+/* ============================================================
+   ERROR PAGE — MOBILE
+============================================================ */
+
+@media (max-width: 40rem) {
+
+    .error-page {
+        min-height: 480px;
+
+        background-size:
+            32px
+            32px;
+    }
+
+    .error-page-code {
+        font-size: clamp(
+            92px,
+            27vw,
+            125px
+        );
+
+        letter-spacing: -3px;
+    }
+
+    .error-page-heading {
+        margin-top: 26px;
+
+        font-size: clamp(
+            32px,
+            8vw,
+            40px
+        );
+
+        letter-spacing: -1px;
+    }
+
+    .error-page-description {
+        max-width: 480px;
+
+        margin-top: 16px;
+
+        font-size: 16px;
+
+        line-height: 1.65;
+    }
+
+    .error-page-cta {
+        margin-top: 26px;
+    }
+
+}
+
+
+/* ============================================================
+   ERROR PAGE — COMPACT MOBILE
+============================================================ */
+
+@media (max-width: 30rem) {
+
+    .error-page {
+        min-height: 440px;
+
+        background-size:
+            28px
+            28px;
+    }
+
+    .error-page-code {
+        font-size: clamp(
+            84px,
+            26vw,
+            110px
+        );
+
+        letter-spacing: -2.5px;
+    }
+
+    .error-page-heading {
+        font-size: clamp(
+            30px,
+            8vw,
+            36px
+        );
+    }
+
+    .error-page-description {
+        font-size: 15px;
+    }
+
+}
+
+
+/* ============================================================
+   ERROR PAGE — VERY SMALL MOBILE
+============================================================ */
+
+@media (max-width: 22.5rem) {
+
+    .error-page-code {
+        font-size: 82px;
+    }
+
+    .error-page-heading {
+        font-size: 29px;
+    }
+
+}
