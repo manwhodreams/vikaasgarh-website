@@ -57,6 +57,21 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
+    /* ========================================================
+       SUCCESS MODAL ELEMENTS
+    ======================================================== */
+
+    const successCloseElements =
+        successModal.querySelectorAll(
+            "[data-community-success-close]"
+        );
+
+    const dashboardButton =
+        document.getElementById(
+            "community-dashboard-button"
+        );
+
+
     const fullNameInput =
         document.getElementById(
             "community-full-name"
@@ -145,6 +160,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let whatsappIti = null;
 
     let isSubmitting = false;
+
+    let successAutoCloseTimer = null;
 
 
     /* ========================================================
@@ -384,6 +401,55 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ========================================================
+       SUCCESS MODAL
+    ======================================================== */
+
+    function cancelSuccessAutoClose() {
+
+        if (successAutoCloseTimer) {
+
+            clearTimeout(
+                successAutoCloseTimer
+            );
+
+            successAutoCloseTimer =
+                null;
+        }
+    }
+
+
+    function closeSuccessModal() {
+
+        cancelSuccessAutoClose();
+
+
+        closeModal(
+            successModal
+        );
+    }
+
+
+    function startSuccessAutoClose() {
+
+        cancelSuccessAutoClose();
+
+
+        successAutoCloseTimer =
+            setTimeout(() => {
+
+                successAutoCloseTimer =
+                    null;
+
+
+                closeModal(
+                    successModal
+                );
+
+            }, 10000);
+    }
+
+
+    /* ========================================================
        OPEN BUTTONS
     ======================================================== */
 
@@ -480,6 +546,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* ========================================================
+       SUCCESS MODAL CLOSE
+    ======================================================== */
+
+    successCloseElements.forEach(element => {
+
+        element.addEventListener(
+            "click",
+            event => {
+
+                event.preventDefault();
+
+
+                closeSuccessModal();
+            }
+        );
+    });
+
+
+    /* ========================================================
+       DASHBOARD BUTTON
+    ======================================================== */
+
+    if (dashboardButton) {
+
+        dashboardButton.addEventListener(
+            "click",
+            () => {
+
+                cancelSuccessAutoClose();
+            }
+        );
+    }
+
+
+    /* ========================================================
        ESCAPE KEY
     ======================================================== */
 
@@ -491,6 +592,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 event.key !== "Escape" ||
                 isSubmitting
             ) {
+                return;
+            }
+
+
+            if (
+                successModal.classList.contains(
+                    "is-open"
+                )
+            ) {
+
+                closeSuccessModal();
+
                 return;
             }
 
@@ -793,13 +906,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     const country =
                         phoneIti
-                            ?.getSelectedCountryData()
+                            ?.getSelectedCountry()
                             ?.iso2;
 
 
                     if (country) {
 
-                        whatsappIti.setCountry(
+                        whatsappIti.setSelectedCountry(
                             country
                         );
                     }
@@ -1356,7 +1469,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const phoneCountry =
             phoneIti
-                ?.getSelectedCountryData()
+                ?.getSelectedCountry()
                 ?.iso2 || "";
 
 
@@ -1383,7 +1496,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 : (
                     whatsappIti
-                        ?.getSelectedCountryData()
+                        ?.getSelectedCountry()
                         ?.iso2 || ""
                 );
 
@@ -1457,7 +1570,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     ""
                 );
 
-                phoneIti.setCountry(
+                phoneIti.setSelectedCountry(
                     "in"
                 );
             }
@@ -1486,7 +1599,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     ""
                 );
 
-                whatsappIti.setCountry(
+                whatsappIti.setSelectedCountry(
                     "in"
                 );
             }
@@ -1706,6 +1819,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 openModal(
                     successModal
                 );
+
+
+                startSuccessAutoClose();
 
 
                 modalOpener =

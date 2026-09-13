@@ -929,8 +929,7 @@
 
     </div>
 
-
-
+    
     <!-- ========================================
         Success Modal
     ======================================== -->
@@ -943,6 +942,7 @@
 
         <div
             class="community-modal-backdrop"
+            data-community-success-close
             aria-hidden="true"
         ></div>
 
@@ -953,6 +953,23 @@
             aria-modal="true"
             aria-labelledby="community-success-title"
         >
+
+            <!-- ========================================
+                Close
+            ========================================= -->
+
+            <button
+                type="button"
+                class="community-success-close"
+                data-community-success-close
+                aria-label="Close registration confirmation"
+            >
+                <i
+                    class="fa-solid fa-xmark"
+                    aria-hidden="true"
+                ></i>
+            </button>
+
 
             <div class="community-success-icon">
 
@@ -988,6 +1005,7 @@
                 <a
                     href="/dashboard/"
                     class="btn btn--primary"
+                    id="community-dashboard-button"
                 >
                     Continue to Dashboard
 
@@ -1002,7 +1020,6 @@
         </div>
 
     </div>
-
 
 
     <!-- ========================================
